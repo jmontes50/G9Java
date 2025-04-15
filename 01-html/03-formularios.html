@@ -1,0 +1,56 @@
+<!-- Emmet -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <header>
+      <h1>Form de registro</h1>
+    </header>
+    <main>
+      <form>
+        <label for="form-nombres">Nombres:</label>
+        <input type="text" name="nombres" id="form-nombres" placeholder="Juan Piero"/>
+        <!-- break, salto de página -->
+        <br />
+        <label for="form-email">Email:</label>
+        <input type="email" name="email" id="form-email" placeholder="user@email.com" />
+        <br />
+        <label for="form-edad">Edad:</label>
+        <input type="number" name="edad" id="form-edad" placeholder="18" min="0" max="100" />
+        <h4>Género</h4>
+        <input
+          type="radio"
+          id="masculino"
+          name="genero"
+        />
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="femenino" name="genero"/>
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="no-divulgar" name="genero"/>
+        <label for="no-divulgar">No Divulgar</label>
+        <!-- horizontal rule -->
+        <hr />
+        <h4>Hobbies</h4>
+        <input type="checkbox" id="hobby1" name="hobbies" value="futbol" />
+        <label for="hobby1">Fútbol</label>
+        <br/>
+        <input type="checkbox" id="hobby2" name="hobbies" value="películas" />
+        <label for="hobby2">Películas</label>
+        <br/>
+        <input type="checkbox" id="hobby3" name="hobbies" value="desarrollar" />
+        <label for="hobby3">Desarrollar</label>
+        <br/>
+        <input type="checkbox" id="hobby4" name="hobbies" value="Videojuegos" />
+        <label for="hobby4">Videojuegos</label>
+        <br/>
+        <input type="checkbox" id="hobby5" name="hobbies" value="Descansar" />
+        <label for="hobby5">Descansar</label>
+        <br/>
+      </form>
+    </main>
+  </body>
+</html>
