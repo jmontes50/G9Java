@@ -1,4 +1,24 @@
+/* selector universal */
+* {
+  font-style: italic;
+}
+
+/* selector de etiqueta/elemento */
 h1 {
   color: aquamarine;
   background-color: steelblue;
+}
+
+p {
+  font-weight: bold;
+  background-color: green;
+}
+
+/* selector clase, se utiliza .nombre_clase para referenciarlas */
+.secundario {
+  color: gray;
+}
+
+.azul {
+  background-color: lightblue;
 }
