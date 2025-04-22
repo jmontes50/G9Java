@@ -89,3 +89,24 @@ tr:hover {
   background-color: cyan;
   cursor: pointer;
 }
+
+/* pseudoelementos :: */
+/* va a hacer referencia a la primera */
+h3::first-letter {
+  font-size: 42px;
+  color: red;
+}
+
+input::placeholder{
+  font-family: Courier;
+  color: blue;
+  font-weight: bold;
+}
+
+button::before {
+  content: "👉"
+}
+
+button::after {
+  content: "👈"
+}
