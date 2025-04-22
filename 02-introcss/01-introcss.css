@@ -33,3 +33,23 @@ p {
   text-decoration: underline;
   color: purple;
 }
+
+/* -- Operadores --- */
+/* cuando hay un espacio entre 2 selectores, estamos haciendo referencia a todos los hijos del primer selector */
+/* todos los li que sean hijos de un ul */
+ul li{
+  color: mediumspringgreen;
+}
+
+/* afecta a los 1eros hijos del selector previo */
+/* los li que sean hijos inmediatos de un ul */
+ul > li {
+  font-weight: bold;
+  color: darkgreen;
+}
+
+/* la , es un Y entre elementos */
+/* todos los span Y los small van a aplicar estas propiedades */
+span, small, h2 {
+  border: 2px solid red;
+}
