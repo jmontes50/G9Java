@@ -22,3 +22,14 @@ p {
 .azul {
   background-color: lightblue;
 }
+
+/* selector de id, se utiliza #nombre_id para referenciarlo */
+#unico {
+  font-size: 36px;
+  color: red;
+}
+
+.mensaje {
+  text-decoration: underline;
+  color: purple;
+}
