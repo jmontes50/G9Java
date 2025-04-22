@@ -25,3 +25,16 @@ span {
   display: inline;
   /* width:400px; */
 }
+
+section {
+  /* display: none; */
+  /* visibility: hidden; */
+  width: 400px;
+  border:2px solid red;
+}
+
+.texto {
+  width: 198px;
+  /* tiene un pequeño margen que no se puede modificar, no es recomendable utilizarlo */
+  display: inline-block;
+}
