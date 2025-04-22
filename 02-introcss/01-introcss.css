@@ -62,3 +62,30 @@ span ~ p {
   font-family: Arial;
   background-color: aqua;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border:1px solid black;
+}
+
+/* pseudoclases */
+tr:nth-of-type(7){
+  color: violet;
+  font-weight: bold;
+}
+/* impar */
+tr:nth-of-type(odd){
+  background-color: chocolate;
+}
+/* par */
+tr:nth-of-type(even){
+  background-color: gold;
+}
+
+tr:hover {
+  background-color: cyan;
+  cursor: pointer;
+}
