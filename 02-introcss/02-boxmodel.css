@@ -1,0 +1,27 @@
+/* reset css */
+* {
+  margin:0;
+  padding:0;
+  /* para todo lo que es width y height ten en cuenta el border y el padding */
+  box-sizing: border-box;
+}
+
+header {
+  border:2px solid blue;
+}
+
+h1 {
+  border:2px solid red;
+  width:300px;
+  margin:10px;
+  padding:20px;
+  height: 150px;
+}
+
+article {
+  border: 2px solid green;
+}
+
+article *{
+  text-decoration: underline;
+}
