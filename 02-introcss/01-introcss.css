@@ -53,3 +53,12 @@ ul > li {
 span, small, h2 {
   border: 2px solid red;
 }
+
+/* combinador de hermanos, en este caso afecta a los hermanos por debajo del elemento span */
+span ~ p {
+/* .yellow ~ p { */
+/* .texto > p { */
+  color: orangered;
+  font-family: Arial;
+  background-color: aqua;
+}
