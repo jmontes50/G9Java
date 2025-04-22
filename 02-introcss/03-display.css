@@ -1,0 +1,27 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+
+  border:2px solid gray;
+}
+
+h1 {
+  width: 200px;
+}
+
+.parrafo1 {
+  width: 300px;
+}
+
+p {
+  /* block, lego, la gran mayoría de elementos se comporta así */
+  display:block;
+}
+
+span {
+  border:2px solid blue;
+  /* inline, me voy a acomodar si hay espacio uno al costado del otro, y no puedo cambiar de tamaño */
+  display: inline;
+  /* width:400px; */
+}
