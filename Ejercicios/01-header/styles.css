@@ -1,0 +1,29 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* temporal */
+  border:2px solid red;
+}
+
+header {
+  /* padding: 96px; */
+  /* padding-top: 96px;
+  padding-bottom: 96px; */
+  /* cuando podemos 2 valores para padding o margin el 1er sera para arriba-abajo y el 2do para los costados */
+  padding:96px 0;
+}
+
+.contenedor {
+  max-width: 1280px;
+  margin:0 auto;
+}
+
+.texto-centrado {
+  text-align: center;
+}
+
+small {
+  display: block;
+  text-align: center;
+}
