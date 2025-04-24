@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   /* temp */
-  border:2px solid gray;
+  /* border:2px solid gray; */
 }
 
 a {
@@ -27,4 +27,43 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Fraunces", serif;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding:42px 88px;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  font-size:32px;
+  font-weight: 900;
+}
+
+.btn {
+  padding: 15px 20px;
+  border-radius:30px;
+  cursor: pointer;
+}
+
+.btn-sm {
+  padding: 8px 15px;
+}
+
+.btn-white {
+  border: 2px solid black;
+  color: black;
+}
+
+.btn-dark {
+  border: 2px solid black;
+  color: white;
+  background-color: black;
 }
