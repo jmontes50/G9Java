@@ -10,6 +10,7 @@
   width: 100%;
   border:3px solid blue;
   display: flex;
+  flex-direction: column;
   /*justify-content es para alinear de forma horizontal, center,space-between, space-around, space-evenly */
   justify-content: space-evenly;
   /* align-items, alinea de forma vertical, flex-start, center, flex-end */
@@ -31,7 +32,7 @@
   font-family: Arial;
 }
 
-.caja:nth-of-type(1) {
+/* .caja:nth-of-type(1) {
   flex-grow: 1;
 }
 
@@ -45,4 +46,4 @@
 
 .caja:nth-of-type(4) {
   flex-shrink: 2;
-}
+} */
