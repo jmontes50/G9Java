@@ -173,3 +173,40 @@ h1, h2, h3, h4, h5, h6 {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/* resources */
+
+.resources-title {
+  font-size: 48px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.resources-container {
+  display: flex;
+  justify-content: space-between;
+  gap:30px;
+}
+
+.resource-box {
+  max-width: 348px;
+  display: flex;
+  flex-direction: column;
+  gap:24px;
+  text-align: center;
+  align-items: center;
+}
+
+.resource-box img {
+  height: 225px;
+  aspect-ratio: auto;
+}
+
+.resource-box:nth-of-type(2) img {
+  width: 278px;
+}
+
+.resource-box:nth-of-type(3) img {
+  width:225px;
+}
