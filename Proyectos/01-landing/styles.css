@@ -74,4 +74,34 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   gap:20px;
   text-align: center;
+  align-items: center;
+}
+
+.oferta {
+  font-size: 12px;
+  background-color:lightgray;
+  width: 100px;
+  border-radius: 10px;
+  padding:5px 10px;
+}
+
+.main-slogan {
+  font-weight: 300;
+  font-size: 72px;
+}
+
+.text-marketing {
+  color:gray;
+  font-size:20px;
+  margin-bottom: 48px;
+}
+
+.call-to-action {
+  display: flex;
+  gap:10px;
+  margin-bottom: 48px;
+}
+
+.img-header {
+  width: 100%;
 }
