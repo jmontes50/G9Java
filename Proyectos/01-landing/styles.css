@@ -141,3 +141,37 @@ h1, h2, h3, h4, h5, h6 {
   color: steelblue;
   margin: 20px 0 30px 0;
 }
+
+/* table */
+.data {
+  padding:36px;
+}
+
+.title-data {
+  font-size:48px;
+  font-weight: 300;
+  margin-bottom:20px;
+}
+
+.table {
+  width:100%;
+  border-collapse: collapse;
+}
+
+.table td {
+  padding:16px;
+}
+
+.table tr:nth-of-type(odd) td{
+  background-color: gold;
+}
+
+.table tr:nth-of-type(odd) td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.table tr:nth-of-type(odd) td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
