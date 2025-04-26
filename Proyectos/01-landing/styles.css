@@ -157,11 +157,9 @@ h1, h2, h3, h4, h5, h6 {
   width:100%;
   border-collapse: collapse;
 }
-
 .table td {
   padding:16px;
 }
-
 .table tr:nth-of-type(odd) td{
   background-color: gold;
 }
