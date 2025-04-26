@@ -29,3 +29,14 @@ header {
     font-size: 24px;
   }
 }
+
+@media (width <= 400px){
+  header {
+    color: green;
+    background-color: aqua;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}
