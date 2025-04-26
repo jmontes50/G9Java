@@ -104,4 +104,40 @@ h1, h2, h3, h4, h5, h6 {
 
 .img-header {
   width: 100%;
+  margin-bottom:96px;
+}
+
+/* questions */
+
+.questions {
+  height: 500px;
+  display: flex;
+  margin-bottom: 96px;
+}
+
+.question-orange {
+  border-top: 4px solid orangered;
+  padding-top: 24px;
+}
+
+.question-orange i {
+  color: orangered;
+  margin: 20px 0 30px 0;
+}
+
+.question-title {
+  font-size:52px;
+  font-weight:300;
+}
+
+.question-blue {
+  border-top: 4px solid steelblue;
+  padding-top: 24px;
+  align-self: flex-end;
+  padding-bottom:48px;
+}
+
+.question-blue i {
+  color: steelblue;
+  margin: 20px 0 30px 0;
 }
