@@ -7,6 +7,15 @@
 .grilla {
   background-color: lightblue;
   height: 100vh;
+  display: grid;
+  /* grid-template-columns: 300px 300px 300px; */
+  /* grid-template-columns: repeat(3, 200px); */
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  /* grid-template-rows: 300px 300px 300px; */
+  grid-template-rows: repeat(3, 200px);
+
+  gap:20px;
 }
 
 .item {
