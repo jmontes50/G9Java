@@ -210,6 +210,16 @@ h1, h2, h3, h4, h5, h6 {
 .resource-box:nth-of-type(3) img {
   width:225px;
 }
+/* menú responsive */
+#check-menu {
+  /* esconde un elemento pero si existe en el html renderizado */
+  visibility: hidden;
+  /* display: none; */
+}
+
+.open-menu, .close-menu {
+  display: none;
+}
 
 @media (width <= 480px) {
   .main-slogan {
