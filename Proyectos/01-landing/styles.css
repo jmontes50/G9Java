@@ -238,13 +238,21 @@ h1, h2, h3, h4, h5, h6 {
 
   .data {
     width:100%;
-    border:2px solid gray;
-    /* overflow es una propiedad que indica como se va a manejar el contenido que desborda a un elemento */
+    /* border:2px solid gray; */
+    /* overflow es una propiedad que indica como se va a manejar el contenido que desborda a un elemento, se le puede añadir -x -y para indicar el eje */
     overflow-x: scroll;
   }
 
   .data .table {
     /* simular que tenemos más datos más contenido */
     width: 700px;
+  }
+
+  .resources-container {
+    flex-direction: column;
+  }
+
+  .resource-box {
+    width:100%;
   }
 }
