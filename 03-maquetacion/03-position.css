@@ -7,20 +7,18 @@
 .contenedor {
   border:3px solid red;
   width: 300px;
-  height: 300px;
+  height: 1300px;
   margin: 30px;
   position: relative;
 }
-
 .caja {
   width: 100px;
   height: 100px;
   background-color: steelblue;
   /* position:relative;
-  top:10px;
-  left:10px; */
+  top:20px;
+  left: 50px; */
 }
-
 .caja-absolute {
   width: 120px;
   height: 120px;
@@ -29,9 +27,13 @@
   top: 50px;
   left: 70px;
 }
-
 .caja-extra{
   width: 100px;
   height: 100px;
   background-color: aquamarine;
+  /* va a tomar en cuenta si o si la ventana del navegador */
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
 }
+
