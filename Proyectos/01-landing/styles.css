@@ -265,4 +265,28 @@ h1, h2, h3, h4, h5, h6 {
   .resource-box {
     width:100%;
   }
+  /* responsive */
+  .open-menu, .close-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .links {
+    background-color: gold;
+    flex-direction: column;
+    position: fixed;
+    top:0;
+    right: -100vw;
+    padding:40px;
+    gap:40px;
+    /* vw vh de acuerdo al tamaño del dispositivo */
+    width: 100vw;
+    height: 100vh;
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+  /* :checked, pseudoclase que indica si un checkbox esta marcado  */
+  #check-menu:checked ~ .links {
+    right:0;
+  }
 }
