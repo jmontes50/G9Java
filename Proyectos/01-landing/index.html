@@ -22,6 +22,13 @@
       <h3 class="logo">
         <a href="#">Life Coach Reiki</a>
       </h3>
+      <!-- sirva como un flag/Booleano interruptor -->
+      <input type="checkbox" id="check-menu" />
+      <!-- abrir el menú -->
+      <label class="open-menu" for="check-menu">
+        <i class="fa-solid fa-bars fa-2x"></i>
+      </label>
+
       <ul class="links">
         <li><a class="link">Read</a></li>
         <li><a class="link">Listen</a></li>
@@ -29,6 +36,10 @@
         <li><a class="link">Transform</a></li>
         <li><a class="btn btn-white btn-sm">Know</a></li>
         <li><a class="btn btn-dark btn-sm">Consult</a></li>
+        <!-- cerrará el menú -->
+        <label class="close-menu" for="check-menu">
+          <i class="fa-solid fa-xmark fa-2x"></i>
+        </label>
       </ul>
     </nav>
     <!-- header -->
