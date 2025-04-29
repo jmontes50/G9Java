@@ -26,6 +26,8 @@
   position: absolute;
   top: 50px;
   left: 70px;
+  /* mientras más alto sea el valor del z-index, estará más por encima de otros elementos con z-index menor */
+  z-index: 9;
 }
 .caja-extra{
   width: 100px;
@@ -43,5 +45,6 @@
   background-color: gold;
   position: sticky;
   top:20px;
+  z-index: 19;
 }
 
