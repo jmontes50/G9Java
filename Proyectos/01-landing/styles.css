@@ -229,9 +229,22 @@ h1, h2, h3, h4, h5, h6 {
   .questions {
     flex-direction: column;
     padding: 0 20px;
+    gap:30px;
   }
 
   .question-title {
     font-size: 36px;
+  }
+
+  .data {
+    width:100%;
+    border:2px solid gray;
+    /* overflow es una propiedad que indica como se va a manejar el contenido que desborda a un elemento */
+    overflow-x: scroll;
+  }
+
+  .data .table {
+    /* simular que tenemos más datos más contenido */
+    width: 700px;
   }
 }
