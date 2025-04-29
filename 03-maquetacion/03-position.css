@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  border:3px solid red;
+  width: 300px;
+  height: 300px;
+}
+
+.caja {
+  width: 100px;
+  height: 100px;
+  background-color: steelblue;
+}
+
+.caja-absolute {
+  width: 120px;
+  height: 120px;
+  background-color: orangered;
+}
