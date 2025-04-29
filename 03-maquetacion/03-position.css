@@ -8,16 +8,30 @@
   border:3px solid red;
   width: 300px;
   height: 300px;
+  margin: 30px;
+  position: relative;
 }
 
 .caja {
   width: 100px;
   height: 100px;
   background-color: steelblue;
+  /* position:relative;
+  top:10px;
+  left:10px; */
 }
 
 .caja-absolute {
   width: 120px;
   height: 120px;
   background-color: orangered;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+}
+
+.caja-extra{
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
 }
