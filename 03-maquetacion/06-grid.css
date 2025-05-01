@@ -22,3 +22,12 @@
   background-color: coral;
   border:2px solid red;
 }
+
+.item:nth-of-type(1) {
+  background-color: red;
+  /* cuando definimos los espacios que va a tomar si indicamos -1 siempre ira al final */
+  /* grid-column: 1 / -1; */
+  /* grid-column y grid-row: #inicial / #final */
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
