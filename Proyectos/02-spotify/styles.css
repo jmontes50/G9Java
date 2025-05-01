@@ -1,0 +1,34 @@
+:root {
+  /* aquí es donde podemos definir variables, tamaño, fuentes, colores */
+  --size-title: 36px;
+  --primary-color: #1db954;
+  --secondary-color-01: #000000;
+  --secondary-color-02: #191414;
+  --secondary-color-03: #505050;
+  --secondary-color-04: #ffffff;
+
+  --genre-color01: #55a891;
+  --genre-color02: #27856a;
+  --genre-color03: #5f8109;
+  --genre-color04: #5e073b;
+  --genre-color05: #f037a5;
+  --genre-color06: #af2896;
+  --genre-color07: #af2896;
+  --genre-color08: #477d95;
+  --genre-color09: #509bf5;
+  --genre-color10: #1d3164;
+  --genre-color11: #e8115b;
+  --genre-color12: #e13300;
+  --genre-color013: #ba5d07;
+}
+
+/* reset */
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: var(--size-title);
+}
