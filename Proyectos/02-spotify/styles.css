@@ -60,6 +60,20 @@ h2 {
 .explore-all-box {
   padding:20px;
   border-radius: 10px;
-  height: 200px;
+  height: 220px;
   background-color: gray;
+  position: relative;
+  overflow: hidden;
+}
+
+.box-genre-title {
+  font-size: 22px;
+}
+
+.box-genre-img {
+  width: 180px;
+  position: absolute;
+  top:55px;
+  right:-30px;
+  transform: rotate(20deg);
 }
