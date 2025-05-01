@@ -54,7 +54,8 @@ h2 {
 .explore-all-container {
   display: grid;
   gap:20px;
-  grid-template-columns: repeat(4, minmax(350px, 1fr));
+  /* auto fit va a utilizar el tamaño mínimo o estático que tenga la columna para colapsar otros elementos */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .explore-all-box {
