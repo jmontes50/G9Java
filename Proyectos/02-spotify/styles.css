@@ -77,3 +77,40 @@ h2 {
   right:-30px;
   transform: rotate(20deg);
 }
+
+.explore-all-box:nth-of-type(1) {
+  background-color: var(--genre-color01);
+}
+.explore-all-box:nth-of-type(2) {
+  background-color: var(--genre-color02);
+}
+.explore-all-box:nth-of-type(3) {
+  background-color: var(--genre-color03);
+}
+.explore-all-box:nth-of-type(4) {
+  background-color: var(--genre-color04);
+}
+.explore-all-box:nth-of-type(5) {
+  background-color: var(--genre-color05);
+}
+.explore-all-box:nth-of-type(6) {
+  background-color: var(--genre-color06);
+}
+.explore-all-box:nth-of-type(7) {
+  background-color: var(--genre-color07);
+}
+.explore-all-box:nth-of-type(8) {
+  background-color: var(--genre-color08);
+}
+.explore-all-box:nth-of-type(9) {
+  background-color: var(--genre-color09);
+}
+.explore-all-box:nth-of-type(10) {
+  background-color: var(--genre-color10);
+}
+.explore-all-box:nth-of-type(11) {
+  background-color: var(--genre-color11);
+}
+.explore-all-box:nth-of-type(12) {
+  background-color: var(--genre-color12);
+}
