@@ -38,3 +38,15 @@ body {
 h2 {
   font-size: var(--size-title);
 }
+
+.explore-all {
+  background-color: var(--secondary-color-02);
+  margin:20px;
+  padding: 24px 16px;
+  border-radius:20px;
+}
+
+.explore-all-title {
+  margin-bottom: 30px;
+}
+
