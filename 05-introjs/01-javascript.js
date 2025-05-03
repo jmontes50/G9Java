@@ -42,3 +42,28 @@ console.log("Reeeesta", "100" - 20);
 console.log("hola " + nombre);
 //Template string, template literals, esta forma es la recomendada
 console.log(`Hola ${nombre} tu nota es de ${16 + 2}`) //backticks `` - alt + 96
+
+let regalo;
+console.log(regalo);
+
+let estado = null;
+console.log(null);
+
+// operadores aritméticos
+let a = 10;
+// a = a + 1;
+a++;
+console.log(a);
+
+// a = a - 1;
+a--;
+
+console.log(a);
+
+// a = a + 7;
+a += 7;
+console.log(a);
+
+// a = a * 10;
+a*=10;
+console.log(a);
