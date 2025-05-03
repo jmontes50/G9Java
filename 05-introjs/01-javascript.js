@@ -26,3 +26,19 @@ let nota = 20;
 console.log("como number", nota);
 nota = "veinte";
 console.log("como string", nota);
+
+//operaciones aritméticas
+console.log("suma", 10 + 20);
+console.log("resta", 10 - 20);
+console.log("multiplicación", 10 * 20);
+console.log("división", 100 / 20);
+console.log("módulo/residuo", 100 % 6);
+
+//cuidado!!!
+let notafinal = "20";
+//el símbolo + se puede usar para concatenación, NO es recomendable
+console.log("queramos hacer una suma", 10 + notafinal);
+console.log("Reeeesta", "100" - 20);
+console.log("hola " + nombre);
+//Template string, template literals, esta forma es la recomendada
+console.log(`Hola ${nombre} tu nota es de ${16 + 2}`) //backticks `` - alt + 96
