@@ -17,3 +17,4 @@ for (let i = 1; i <= numberCompras; i++){
 }
 
 console.log(`Gastaste un total de ${costoTotal}`);
+
