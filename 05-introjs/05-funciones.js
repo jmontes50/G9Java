@@ -24,3 +24,23 @@ console.log(multiplicacion(10, 4));
 const division = (a, b) => a / b;
 
 console.log(division(100, 4));
+
+const saludar = nombre => `Hola soy ${nombre}`;
+
+console.log(saludar("Jorge"));
+
+//-------------------------funciones callback
+const ejecutarOperacion = (operacion, a, b) => {
+  return operacion(a, b);
+}
+
+console.log(ejecutarOperacion(division, 100, 20));
+console.log(ejecutarOperacion(sumar, 100, 20));
+
+console.log(ejecutarOperacion((x, y) => {
+  return (x + y) * 1000;
+}, 4, 5));
+
+console.log(ejecutarOperacion(function (x, y){
+  return (x + y) + 1000;
+}, 4, 5));
