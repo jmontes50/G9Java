@@ -26,3 +26,16 @@ console.log(frutas);
 //Remueve un item del inicio
 frutas.shift();
 console.log(frutas);
+
+//remover de cualquier posición, splice(indice, cantidadItems)
+frutas.splice(1, 1, "Mandarina");
+console.log(frutas);
+
+for(let fruit of frutas) {
+    console.log(fruit);
+}
+
+for(let i = 0; i < frutas.length; i++){
+    //como i se va incrementando en 1
+    console.log(frutas[i]);
+}
