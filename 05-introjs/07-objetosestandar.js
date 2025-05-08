@@ -52,3 +52,23 @@ const diasHastaNavidad = timestampHastaNavidad / 1000 / 60 / 60 / 24;
 
 console.log(diasHastaNavidad);
 
+//----------------------------------------------------------
+
+const pokemon = {
+    name: "Pikachu",
+    salud: 100
+}
+
+const pokemonCopia = pokemon; //objetos, cualquiera cosa que no sea primitivo
+
+console.log("og", pokemon)
+
+console.log("copy", pokemonCopia)
+
+pokemonCopia.salud = 60;
+
+console.log("og2", pokemon)
+
+console.log("copy2", pokemonCopia)
+
+//solucionar esto, Spread Operator
