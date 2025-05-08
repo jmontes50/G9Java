@@ -44,3 +44,12 @@ if(rol === "admin" || rol === "supervisor"){
 } else {
   console.log("rol incorrecto");
 }
+
+if (!undefined) {
+  console.log("es falsy")
+}
+
+//operador ternarios
+let esTruthy = 10 < 100 ? "Es verdadero" :  "Es falso";
+
+console.log(esTruthy)
