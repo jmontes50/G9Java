@@ -10,3 +10,16 @@ const validarPermisos = (rol = "Persona", nombre = "Juan") => {
 
 validarPermisos();
 validarPermisos("admin");
+
+//desestructuracion de arreglos
+
+const platos = ["Ensalada de Palta", "Seco de cabrito", "Chicha Morada"];
+
+// console.log(platos[1]);
+// const entrada = platos[0];
+const [entrada, segundo, bebida] = platos;
+
+console.log(entrada);
+console.log(segundo);
+console.log(bebida);
+
