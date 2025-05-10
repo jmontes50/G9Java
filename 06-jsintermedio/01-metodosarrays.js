@@ -26,8 +26,16 @@ console.log("Map - ", frutasMayus);
 let precios = [20, 30, 40, 50, 60, 70, 100];
 
 //filtrar
-let preciosDentroPresupuesto = precios.filter((num) => {
-  return num >= 30 && num <= 60;
-});
+// let preciosDentroPresupuesto = precios.filter((num) => {
+//   return num >= 30 && num <= 60;
+// });
+// let preciosDentroPresupuesto = precios.filter(function(num) {
+//   return num >= 30 && num <= 60;
+// });
+// const paraFiltrar = (num) => {
+//   return num >= 30 && num <= 60;
+// }
+// let preciosDentroPresupuesto = precios.filter(paraFiltrar);
+let preciosDentroPresupuesto = precios.filter((num) => num >= 30 && num <= 60);
 
 console.log("filter - ", preciosDentroPresupuesto)
