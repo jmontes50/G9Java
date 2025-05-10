@@ -38,4 +38,4 @@ for(let fruit of frutas) {
 for(let i = 0; i < frutas.length; i++){
     //como i se va incrementando en 1
     console.log(frutas[i]);
-}
+}   
