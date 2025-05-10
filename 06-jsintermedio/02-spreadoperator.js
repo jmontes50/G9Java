@@ -4,7 +4,7 @@ const tarea = {
   tema:"Biología"
 }
 
-//copia por referencia, solo pasa cuando son NO primitivos
+//copia por referencia, solo pasa cuando son NO primitivos, NO ES BUENO
 const tarea2 = tarea;
 
 tarea2.paginas = 75;
