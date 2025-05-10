@@ -22,3 +22,12 @@ let frutasMayus = frutas.map((item, index) => {
 
 console.log("Map - ", frutasMayus);
 // console.log("OG - ", frutas);
+
+let precios = [20, 30, 40, 50, 60, 70, 100];
+
+//filtrar
+let preciosDentroPresupuesto = precios.filter((num) => {
+  return num >= 30 && num <= 60;
+});
+
+console.log("filter - ", preciosDentroPresupuesto)
