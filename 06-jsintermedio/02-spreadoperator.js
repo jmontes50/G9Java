@@ -41,3 +41,12 @@ copiaNuevaTarea.tema = "Blockchain";
 console.log("copiaNuevaTarea ", copiaNuevaTarea);
 
 console.log("NuevaTarea ", nuevaTarea);
+
+//Spread Operator en Arrays
+let frutas = ["Kiwi", "Piña", "Mango", "Maracuya"];
+let verduras = ["Lechuga", "Pepino", "Zanahoria"];
+
+// console.log(typeof frutas);
+let canasta = [...frutas, ...verduras, "Pollo", "Huevos"];
+
+console.log(canasta);
