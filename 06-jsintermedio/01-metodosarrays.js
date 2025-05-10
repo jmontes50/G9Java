@@ -48,3 +48,25 @@ const ordenado = edades.toSorted();
 console.log(ordenado);
 
 console.log("OG - ", edades);
+
+//reduce
+let sumaEdades = edades.reduce((acumulador, item) => {
+  return acumulador + item;
+})
+
+console.log(sumaEdades);
+
+let carrito = [
+  { prod:"Chifles", precio: 10 },
+  { prod:"Frijoles", precio: 6 },
+  { prod:"King Kong", precio: 25 }
+]
+
+let total = carrito.reduce((acumulador, item) => {
+  console.log("acumulador: ", acumulador)
+  console.log("item: ",item.precio);
+  return acumulador + item.precio;
+  //como 2do argumento podemos indicar el valor inicial de acumulador
+}, 0);
+
+console.log(total);
