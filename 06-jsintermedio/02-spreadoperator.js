@@ -42,6 +42,10 @@ console.log("copiaNuevaTarea ", copiaNuevaTarea);
 
 console.log("NuevaTarea ", nuevaTarea);
 
+const copia2 = structuredClone(nuevaTarea); //son objetos muy complejos, varios niveles
+
+console.log("copia2:", copia2)
+
 //Spread Operator en Arrays
 let frutas = ["Kiwi", "Piña", "Mango", "Maracuya"];
 let verduras = ["Lechuga", "Pepino", "Zanahoria"];
