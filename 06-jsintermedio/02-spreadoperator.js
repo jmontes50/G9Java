@@ -1,14 +1,14 @@
 const tarea = {
-  nombre:"Proyecto",
-  paginas:100,
-  tema:"Biología"
-}
+  nombre: "Proyecto",
+  paginas: 100,
+  tema: "Biología",
+};
 
 //copia por referencia, solo pasa cuando son NO primitivos, NO ES BUENO
 const tarea2 = tarea;
 
 tarea2.paginas = 75;
-tarea2.tema = "Biotecnología"
+tarea2.tema = "Biotecnología";
 
 console.log("tarea2 ", tarea2);
 
@@ -26,14 +26,18 @@ console.log("copiaEdad ", copiaEdad);
 
 //SPREAD OPERATOR, operador de propagación
 const nuevaTarea = {
-  nombre:"Monografía",
+  nombre: "Monografía",
   paginas: 10,
-  tema: "IA"
-}
+  tema: "IA",
+};
 
-const copiaNuevaTarea = { ...nuevaTarea };
+const copiaNuevaTarea = {
+  ...nuevaTarea,
+  paginas: 12, //modificando una propiedad existente
+  subtema: "Aplicado a finanzas", //agregando una nueva propiedad
+};
 
 copiaNuevaTarea.tema = "Blockchain";
 console.log("copiaNuevaTarea ", copiaNuevaTarea);
 
-console.log("NuevaTarea ",nuevaTarea);
+console.log("NuevaTarea ", nuevaTarea);
