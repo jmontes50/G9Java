@@ -38,4 +38,13 @@ let precios = [20, 30, 40, 50, 60, 70, 100];
 // let preciosDentroPresupuesto = precios.filter(paraFiltrar);
 let preciosDentroPresupuesto = precios.filter((num) => num >= 30 && num <= 60);
 
-console.log("filter - ", preciosDentroPresupuesto)
+console.log("filter - ", preciosDentroPresupuesto);
+
+let edades = [20, 30, 19, 18, 30, 42, 25, 28];
+
+// const ordenado = edades.sort();
+const ordenado = edades.toSorted();
+
+console.log(ordenado);
+
+console.log("OG - ", edades);
