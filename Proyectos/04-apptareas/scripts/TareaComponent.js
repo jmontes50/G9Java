@@ -11,6 +11,12 @@ const TareaComponent = (tarea, indice) => {
     </button>
   `;
 
+  //podemos utilizar querySelector en un element
+  const btn = liTarea.querySelector(".btn-eliminar");
+  btn.addEventListener("click", () => {
+    alert(`Vamos a eliminar ${tarea}`);
+  });
+
   return liTarea;
 }
 
