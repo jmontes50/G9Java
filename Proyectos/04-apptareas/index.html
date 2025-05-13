@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>TareasApp</h1>
+    </header>
+    <main>
+      <form id="form-tarea">
+        <input 
+          type="text" 
+          placeholder="Ingrese una nueva tarea"
+          id="input-tarea"
+          name="tarea"
+        />
+        <button id="btn-tarea">Agregar</button>
+      </form>
+      <hr />
+      <section>
+        <h2>Tareas Pendientes</h2>
+        <ul id="lista-tareas"> </ul>
+      </section>
+    </main>
+
+    <!-- scripts tw -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- nuestros scripts -->
+    <script src="./scripts/app.js" type="module"></script>
+  </body>
+</html>
