@@ -1,4 +1,4 @@
-// console.log(document);
+console.log(document);
 
 //selector JS, y que me retorna
 const titulo = document.getElementById("titulo");
@@ -6,9 +6,9 @@ const titulo = document.getElementById("titulo");
 //objeto tipo Element
 console.log(titulo);
 
-titulo.innerHTML = "Bienvenido al DOM";
+titulo.innerHTML = "Welcome to DOM";
 
-titulo.style.color = "blue";
+titulo.style.color = "orange";
 
 //querySelector, funciona como un selector de css
 const parrafos = document.querySelectorAll(".parrafo");
@@ -16,5 +16,5 @@ const parrafos = document.querySelectorAll(".parrafo");
 console.log(parrafos);
 
 parrafos.forEach((item) => {
-    item.style.color = "red";
+    item.style.color = "blue";
 })
