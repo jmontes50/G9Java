@@ -5,6 +5,13 @@ let tareas = [];
 
 formTarea.addEventListener("submit", (evento) => {
   evento.preventDefault();
-  console.log(evento);
-  console.log("submit!!!");
+
+  const formData = new FormData(formTarea);
+  console.log(formData);
+  const data = Object.fromEntries(formData.entries());
+  console.log(data);
+
+  tareas.push(data.tarea);
+  console.table(tareas);
+
 });
