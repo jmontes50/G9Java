@@ -1,5 +1,5 @@
 //Componente va a ser una función
-const TareaComponent = (tarea, indice) => {
+const TareaComponent = (tarea, indice, funcionParaEliminar) => {
   const liTarea = document.createElement("li");
 
   liTarea.innerHTML = `
@@ -14,7 +14,8 @@ const TareaComponent = (tarea, indice) => {
   //podemos utilizar querySelector en un element
   const btn = liTarea.querySelector(".btn-eliminar");
   btn.addEventListener("click", () => {
-    alert(`Vamos a eliminar ${tarea}`);
+    // alert(`Vamos a eliminar ${tarea}`);
+    funcionParaEliminar(indice);
   });
 
   return liTarea;

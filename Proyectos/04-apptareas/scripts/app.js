@@ -18,10 +18,15 @@ formTarea.addEventListener("submit", (evento) => {
   dibujarTareas();
 });
 
+const eliminarTarea = (indice) => {
+  tareas.splice(indice, 1); //eliminar
+  dibujarTareas(); //actualizar
+}
+
 const dibujarTareas = () => {
   listaTareas.innerHTML = "";
   tareas.forEach((item, indice) => {
-    const elementoTarea = TareaComponent(item, indice);
+    const elementoTarea = TareaComponent(item, indice, eliminarTarea);
     listaTareas.appendChild(elementoTarea);
   })
 }
