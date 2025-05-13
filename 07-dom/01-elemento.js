@@ -31,3 +31,11 @@ console.log(atributo);
 inputEmail.setAttribute("type", "email");
 //agregar nuevos atributos
 inputEmail.setAttribute("placeholder","Ingrese su correo");
+
+//Eventos
+const button = document.querySelector("#btn");
+
+console.log(button);
+button.addEventListener("click", () => {
+    alert("Hola mundo desde JS!");
+})
