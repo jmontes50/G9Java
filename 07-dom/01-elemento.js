@@ -74,3 +74,12 @@ console.log(btnFooter);
 btnFooter.style.color = "red";
 //background-color, cambiamos de kebabCase a camelCase
 btnFooter.style.backgroundColor = "lightgreen";
+
+//Crear un objeto element, (div) (header)
+const img = document.createElement("img");
+
+img.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaMCE_I9HLqulrBpGr5RzuOZRONZEINA0_Bg&s");
+
+console.log(img);
+
+footer.appendChild(img);
