@@ -52,3 +52,25 @@ inputEmail.addEventListener("input", () => {
 // inputEmail.addEventListener("keyup", () => {
 //     console.log(inputEmail.value);
 // })
+
+//--------------------------------------
+const footer = document.querySelector("footer");
+
+//En estos casos es muy util el backtick
+footer.innerHTML = `
+  <h3>Información</h3>
+  <ul>
+    <li>Correo: info@gmail.com</li>
+    <li>Dirección: Av. Lima</li>
+  </ul>
+  <button id="btn-footer">
+    Contáctenos
+  </button>
+`;
+
+const btnFooter = document.getElementById("btn-footer");
+
+console.log(btnFooter);
+btnFooter.style.color = "red";
+//background-color, cambiamos de kebabCase a camelCase
+btnFooter.style.backgroundColor = "lightgreen";
