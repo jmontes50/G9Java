@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="p-3">
     <header>
-      <h1>TareasApp</h1>
+      <h1 class="text-2xl font-bold mb-2">TareasApp</h1>
     </header>
     <main>
       <form id="form-tarea">
@@ -16,13 +16,18 @@
           placeholder="Ingrese una nueva tarea"
           id="input-tarea"
           name="tarea"
+          class="border rounded p-1"
         />
-        <button id="btn-tarea">Agregar</button>
+        <button id="btn-tarea" class="bg-black p-1 text-white rounded">
+          Agregar
+        </button>
       </form>
       <hr />
       <section>
-        <h2>Tareas Pendientes</h2>
-        <ul id="lista-tareas"> </ul>
+        <h2 class="text-xl font-semibold mb-1">Tareas Pendientes</h2>
+        <ul id="lista-tareas">
+
+        </ul>
       </section>
     </main>
 
