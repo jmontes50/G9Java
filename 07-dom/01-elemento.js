@@ -39,3 +39,16 @@ console.log(button);
 button.addEventListener("click", () => {
     alert("Hola mundo desde JS!");
 })
+
+//aplica para cuando cambie el valor de algo, en un input cuando cambio y se le deja de hacer focus
+//En un select cuando cambiamos de opción
+// inputEmail.addEventListener("change", () => {
+//input detecta c/cambio al escribir
+inputEmail.addEventListener("input", () => {
+    console.log(inputEmail.value);
+})
+
+// //keypress, keydown, keyup
+// inputEmail.addEventListener("keyup", () => {
+//     console.log(inputEmail.value);
+// })
