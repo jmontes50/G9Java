@@ -17,6 +17,10 @@ const obtenerDatos = async () => {
   }
 };
 
+const registrarUsuario = async () => {
+  return "Registro completado!"
+}
+
 // async function obtenerDatos () {
 //   return "Datos obtenidos!";
 //   // throw "No se encontraron datos";
@@ -34,6 +38,9 @@ const iniciar = async() => {
   try {
     const res = await obtenerDatos(); //return / resolve
     console.log(res);
+    const registro = await registrarUsuario();
+    //podemos tener varios await, es el equivalente a encadenamiento de promesas
+    console.log(registro);
   } catch (error) {
     console.log(error) //throw / reject
   }
