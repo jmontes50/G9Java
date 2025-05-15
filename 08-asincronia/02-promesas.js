@@ -31,10 +31,27 @@ const buscarEnBDPromesa = () => {
   })
 }
 
-buscarEnBDPromesa()
-.then((result) => {
-  console.log(result);
+const registrarEnEvento = () => new Promise ((resolve, reject) => {
+  setTimeout(() => {
+    const seRegistro = Math.random();
+    console.log({ seRegistro });
+    if(seRegistro > 0.3){
+      resolve("Registro exitoso");
+    }else{
+      reject("Error al registrar");
+    }
+  }, 2000)
 })
-.catch((err) => {
+
+buscarEnBDPromesa()
+.then((result) => { //resolve +
+  console.log(result); 
+  //retornar la nueva promesa, para hacer encadenamiento de promesas
+  return registrarEnEvento();
+})
+.then((resultado) => {
+  console.log(resultado);
+})
+.catch((err) => { //reject -
   console.log(err)
 });
