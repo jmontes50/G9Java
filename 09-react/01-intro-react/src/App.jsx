@@ -1,3 +1,5 @@
+import Parrafo from "./components/Parrafo";
+
 //el nombre del componente tiene que comenzar con Mayus, ej: App, Counter, Card
 const App = () => {
   //el componente tiene que retornar algo de JSX (JSX, como algo muy parecido a HTML)
@@ -17,6 +19,10 @@ const App = () => {
       {/* Toda etiqueta tiene que tener su etiqueta de cierre o un autocierre /> */}
       <label htmlFor="input-name">Nombre completo</label>
       <input type="text" placeholder="Ingrese su nombre" id="input-name" />
+      <hr />
+      <Parrafo />
+      <Parrafo />
+      <Parrafo />
     </>
   );
 };
