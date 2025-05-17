@@ -1,5 +1,6 @@
 {
   "name": "proyecto-node",
+  "type": "module",
   "version": "1.0.0",
   "description": "Proyecto demostrativo de bases de node",
   "main": "index.js",
