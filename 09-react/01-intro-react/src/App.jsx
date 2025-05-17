@@ -7,17 +7,19 @@ const App = () => {
   return (
     // Fragment <></>
     <>
-      <header>
-        Probando React!!!!!
-      </header>
+      {/* className y htmlFor son reemplazos para class y for respectivamente porque son identicos a palabras reservadas de JS */}
+      <header className="title">Probando React!!!!!</header>
       <div>
         {/* Todo lo que pongamos entre llaves dentro de JSX es JS */}
         {titulo}
         {10 * 50}
       </div>
+      {/* Toda etiqueta tiene que tener su etiqueta de cierre o un autocierre /> */}
+      <label htmlFor="input-name">Nombre completo</label>
+      <input type="text" placeholder="Ingrese su nombre" id="input-name" />
     </>
-  )
-}
+  );
+};
 
 //el componente tiene que ser exportado de preferencia por default
 export default App;
