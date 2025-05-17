@@ -20,9 +20,9 @@ const App = () => {
       <label htmlFor="input-name">Nombre completo</label>
       <input type="text" placeholder="Ingrese su nombre" id="input-name" />
       <hr />
-      <Parrafo />
-      <Parrafo />
-      <Parrafo />
+      <Parrafo texto="JSX me agrada" fecha="12/10" />
+      <Parrafo texto="Los node_modules son muy grandes" fecha="18/08"/>
+      <Parrafo texto="Angular es raro" fecha="05/09" />
     </>
   );
 };
