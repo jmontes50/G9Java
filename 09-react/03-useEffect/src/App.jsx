@@ -2,17 +2,19 @@ import { useEffect, useState } from "react";
 
 //rafce
 const App = () => {
+  console.log("1. Yo estoy al inicio!!")
   const [contador1, setContador1] = useState(1);
   const [contador2, setContador2] = useState(1000);
 
   useEffect(() => {
     //escucha cambios de estado del componente y nuevos props
     //y cuando encuentre algun cambio se ejecuta de nuevo
-    console.log("-----------")
+    console.log("los useEffect se ejecutan depende del cambio de estado")
     console.log(`Cambio!!! ${contador1}`); 
   }, [contador1])
 
   useEffect(() => {
+    console.log("4. Dentro de un useEffect!!")
     console.log(`Change!!! ${contador2}`); 
   }, [contador2])
 
@@ -25,8 +27,11 @@ const App = () => {
     .catch((err) => console.log(err))
   }, [])
 
+
+  console.log("2. Yo estoy justo antes del return!!")
   return (
     <div>
+      { console.log("3. Yo estoy dentro del JSX!!")}
       <hr />
       <h3>Contador1: {contador1}</h3>
       <button
