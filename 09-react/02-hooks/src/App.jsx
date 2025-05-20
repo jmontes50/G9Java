@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Validator from "./components/Validator";
 
 //Al cambiar un estado o recibir nuevos props en un componente, hará que este se vuelva a renderizar, pero con la información actualizada
 const App = () => {
@@ -18,10 +19,11 @@ const App = () => {
       <button onClick={incremento}>
         Incrementar
       </button>
-      <h2>
-        {/* renderizado condicional */}
+      <Validator />
+      {/* renderizado condicional */}
+      {/* <h2>
         {contador > 10 ? "Es demasiado!!!" : "Aún falta!"}
-      </h2>
+      </h2> */}
     </>
   );
 };
