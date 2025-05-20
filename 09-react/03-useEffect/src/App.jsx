@@ -16,6 +16,15 @@ const App = () => {
     console.log(`Change!!! ${contador2}`); 
   }, [contador2])
 
+  useEffect(() => {
+    console.log("Yo solo me ejecuto al inicio!!");
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    //respuesta.json me retorna una Promesa
+    .then((respuesta) => respuesta.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err))
+  }, [])
+
   return (
     <div>
       <hr />
