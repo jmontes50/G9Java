@@ -11,4 +11,4 @@ const Validator = ({ counter }) => {
   )
 }
 
-export default Validator;2
+export default Validator;
