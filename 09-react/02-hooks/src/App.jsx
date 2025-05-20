@@ -18,8 +18,8 @@ const App = () => {
       <hr />
       <button onClick={incremento}>
         Incrementar
-      </button>
-      <Validator />
+      </button>counter
+      <Validator counter={contador} />
       {/* renderizado condicional */}
       {/* <h2>
         {contador > 10 ? "Es demasiado!!!" : "Aún falta!"}
