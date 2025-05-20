@@ -10,7 +10,11 @@ const App = () => {
     //y cuando encuentre algun cambio se ejecuta de nuevo
     console.log("-----------")
     console.log(`Cambio!!! ${contador1}`); 
-  })
+  }, [contador1])
+
+  useEffect(() => {
+    console.log(`Change!!! ${contador2}`); 
+  }, [contador2])
 
   return (
     <div>
