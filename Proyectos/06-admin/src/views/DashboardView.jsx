@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import { requestProducts } from "../services/productService";
 
 const DashboardView = () => {
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
     try {
       const getProducts = async () => {
-        const products = await requestProducts();
-        console.log(products);
+        const productsObtained = await requestProducts();
+        // console.log(products);
+        setProducts(productsObtained);
       };
       getProducts();
     } catch (error) {
