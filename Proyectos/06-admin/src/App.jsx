@@ -1,8 +1,10 @@
-
+import DashboardView from "./views/DashboardView"
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <DashboardView />
+    </>
   )
 }
 
