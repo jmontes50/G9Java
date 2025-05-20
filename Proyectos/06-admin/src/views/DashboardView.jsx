@@ -2,15 +2,17 @@ import { useState, useEffect } from "react";
 import { requestProducts } from "../services/productService";
 
 const DashboardView = () => {
-
-  useEffect(async () => {
+  useEffect(() => {
     try {
-      const products = await requestProducts()
-      console.log(products)
+      const getProducts = async () => {
+        const products = await requestProducts();
+        console.log(products);
+      };
+      getProducts();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }, [])
+  }, []);
 
   return <div>DashboardView</div>;
 };
