@@ -21,7 +21,7 @@ const App = () => {
         Incrementar
       </button>
       <hr />
-      <Button />
+      <Button counter={contador} setCounter={setContador}/>
       <hr />
       <Validator counter={contador} />
       {/* renderizado condicional */}

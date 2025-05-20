@@ -1,6 +1,10 @@
-const Button = () => {
+const Button = ({ counter, setCounter }) => {
+  const funcionDisminuir = () => {
+    setCounter(counter - 1);
+  }
+
   return (
-    <button>
+    <button onClick={funcionDisminuir}>
       Disminuir
    </button>
   )
