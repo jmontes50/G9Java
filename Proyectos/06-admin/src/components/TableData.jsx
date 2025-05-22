@@ -16,8 +16,8 @@ const TableData = (props) => {
     </thead>
     <tbody>
       {data.map((product) => (
-        <tr key={item.id}>
-          
+        <tr key={product.id}>
+
         </tr>
       ))}
     </tbody>
