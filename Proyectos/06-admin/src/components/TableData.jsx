@@ -3,6 +3,29 @@ const TableData = (props) => {
   console.log(data);
 
   return (
+  <table className="border-collapse border-t-2 w-full px-4 py-2">
+    <thead>
+      <tr>
+        {/* en algunos casos podemos usar el index de un arreglo como key, lo ideal es que tengamos un id pero de ser necesario es útil */}
+        {headers.map((item, indice) => (
+          <th key={indice} className="border-t-2 px-4 py-2">
+            {item.label}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {data.map((product) => (
+        <tr key={item.id}>
+          
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  )
+
+/*
+  return (
     <table>
       <tbody>
         {data.map((producto) => (
@@ -15,6 +38,8 @@ const TableData = (props) => {
       </tbody>
     </table>
   );
+  */
 };
+
 
 export default TableData;
