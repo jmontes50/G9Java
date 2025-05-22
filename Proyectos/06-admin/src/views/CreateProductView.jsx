@@ -18,7 +18,14 @@ const CreateProductView = () => {
     { name:"nombre", label:"Nombre del producto", type: "text" },
     { name:"descripcion", label:"Descripción", type: "text" }
   ]
-  // import Input from "../components/Input";
+
+  const handleInput = (event) => {
+    console.log("name:", event.target.name);
+    console.log("value:", event.target.value);
+    // setProduct({...product, nombre: "chocolate"})
+    setProduct({...product, [event.target.name]:event.target.value});
+  }
+  
   return (
     <form>
       {inputsInfo.map((item, i) => (
@@ -28,7 +35,7 @@ const CreateProductView = () => {
           name={item.name}
           label={item.label}
           type={item.type}
-          handleInput={() => {}}
+          handleInput={handleInput}
         />
       ))}
     </form>
