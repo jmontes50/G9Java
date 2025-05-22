@@ -18,12 +18,12 @@ const CreateProductView = () => {
     { name:"nombre", label:"Nombre del producto", type: "text" },
     { name:"descripcion", label:"Descripción", type: "text" }
   ]
-  
+  // import Input from "../components/Input";
   return (
     <form>
       {inputsInfo.map((item, i) => (
         <Input
-          key={i}
+          key={i} //key no se envia como props
           value={product}
           name={item.name}
           label={item.label}
