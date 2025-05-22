@@ -11,7 +11,7 @@ const DashboardView = () => {
   ]
 
   useEffect(() => {
-    try {
+    try { 
       const getProducts = async () => {
         const productsObtained = await requestProducts();
         // console.log(products);

@@ -3,8 +3,18 @@ const TableData = (props) => {
   console.log(data);
 
   return (
-    <div>TableData</div>
-  )
-}
+    <table>
+      <tbody>
+        {data.map((producto) => (
+          <tr key={producto.id}>
+            <td>{producto.nombre}</td>
+            <td>{producto.descripcion}</td>
+            <td>{producto.precio}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};
 
-export default TableData
+export default TableData;
