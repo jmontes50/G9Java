@@ -9,7 +9,10 @@ const DashboardView = () => {
   const headers = [
     { name: "nombre", label: "Nombre" },
     { name: "descripcion", label: "Descripción" },
-    { name: "precio", label: "Precio Normal"}
+    { name: "precio", 
+      label: "Precio Normal",
+      format: (value) => `S/ ${value}`
+    }
   ]
 
   useEffect(() => {
