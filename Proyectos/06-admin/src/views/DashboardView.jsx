@@ -8,7 +8,8 @@ const DashboardView = () => {
   //se utilizará para las cabeceras de la tabla
   const headers = [
     { name: "nombre", label: "Nombre" },
-    { name: "descripcion", label: "Descripción" }
+    { name: "descripcion", label: "Descripción" },
+    { name: "precio", label: "Precio Normal"}
   ]
 
   useEffect(() => {

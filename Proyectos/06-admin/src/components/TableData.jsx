@@ -15,9 +15,15 @@ const TableData = (props) => {
       </tr>
     </thead>
     <tbody>
+      {/* recorremos data/products 1 x 1*/}
       {data.map((product) => (
         <tr key={product.id}>
-
+          {/* dentro de la fila recorremos otra vez headers */}
+          {headers.map((head, i) => (
+            <td key={i} className="border-t-2 px-4 py-2">
+              {product[head.name]}
+            </td>
+          ))}
         </tr>
       ))}
     </tbody>
