@@ -11,7 +11,7 @@ const Input = (props) => {
         placeholder={`Ingrese ${label}`}
         id={name}
         name={name} //el name es importante
-        value={value[name]}
+        value={value[name]} //product['descripcion']
         onChange={handleInput}
         className="input w-full"
       />
