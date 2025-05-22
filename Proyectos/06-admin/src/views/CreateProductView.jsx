@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Input from "../components/Input";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
@@ -12,9 +13,25 @@ const CreateProductView = () => {
     imagen: "https://picsum.photos/500",
     categoryId:1,
   });
+
+  const inputsInfo = [
+    { name:"nombre", label:"Nombre del producto", type: "text" },
+    { name:"descripcion", label:"Descripción", type: "text" }
+  ]
   
   return (
-    <div>CreateProductView</div>
+    <form>
+      {inputsInfo.map((item, i) => (
+        <Input
+          key={i}
+          value={product}
+          name={item.name}
+          label={item.label}
+          type={item.type}
+          handleInput={() => {}}
+        />
+      ))}
+    </form>
   )
 }
 
