@@ -12,10 +12,24 @@ const requestProducts = async () => {
       throw new Error("Error en el código de estado de la petición");
     }
   } catch (error) {
-    console.error(error);
+    throw error;
+  }
+}
+
+const requestCreateProduct = async (newProduct) => {
+  try {
+    const response = await axios.post(`${URL}/products`, newProduct);
+    if (response.status === 201) {
+      return response.data
+    } else {
+      throw new Error ("Error en el código de estado de la petición");
+    }
+  } catch (error) {
+    throw error;
   }
 }
 
 export {
-  requestProducts
+  requestProducts,
+  requestCreateProduct
 }
