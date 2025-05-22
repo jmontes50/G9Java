@@ -1,10 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardView from "./views/DashboardView"
 
 const App = () => {
   return (
-    <>
-      <DashboardView />
-    </>
+    <BrowserRouter>
+
+      <Routes>
+        {/* aquí dentro van solo las rutas */}
+        {/* <Route path="ruta" element={<Componente a mostrar />} /> */}
+        <Route path="/" element={<DashboardView />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
