@@ -2,6 +2,8 @@ import { useState } from "react";
 import Input from "../components/Input";
 import { requestCreateProduct } from "../services/productService";
 import { uploadFile } from "../services/supabaseService";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
@@ -16,6 +18,8 @@ const CreateProductView = () => {
     categoryId:1,
   });
   const [image, setImage] = useState(null);
+
+  const navigate = useNavigate();
 
   const inputsInfo = [
     { name:"nombre", label:"Nombre del producto", type: "text" },
@@ -44,7 +48,13 @@ const CreateProductView = () => {
       }
       // return; //temporal, para que no cree el producto todavia
       const res = await requestCreateProduct(product);
-      console.log("Hecho!!", res);
+      // console.log("Hecho!!", res);
+      await Swal.fire({
+        icon:"success",
+        title:`Éxito!`,
+        text:`${product.nombre} se creó exitosamente`
+      })
+      navigate('/');
     } catch (error) {
       console.log(error)
     }
