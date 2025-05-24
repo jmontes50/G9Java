@@ -30,9 +30,14 @@ const CreateProductView = () => {
     setProduct({...product, [event.target.name]:event.target.value});
 
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ product })
+  }
   
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       {inputsInfo.map((item, i) => (
         <Input
           key={i} //key no se envia como props
@@ -43,6 +48,9 @@ const CreateProductView = () => {
           handleInput={handleInput}
         />
       ))}
+      <button className="btn btn-soft btn-success mt-2">
+        Guardar
+      </button>
     </form>
   )
 }
