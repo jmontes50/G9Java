@@ -14,6 +14,7 @@ const CreateProductView = () => {
     imagen: "https://picsum.photos/500",
     categoryId:1,
   });
+  const [image, setImage] = useState(null);
 
   const inputsInfo = [
     { name:"nombre", label:"Nombre del producto", type: "text" },
@@ -42,6 +43,12 @@ const CreateProductView = () => {
       console.log(error)
     }
   }
+
+  const handleInputFile = (event) => {
+    // console.log(event.target.files)
+    //target.files nos da un FileList que funciona como Array asi que tomamos la 1ra imagen con [0]
+    setImage(event.target.files[0]);
+  }
   
   return (
     <form onSubmit={handleSubmit}>
@@ -61,7 +68,8 @@ const CreateProductView = () => {
           className="file-input w-full"
           id="imagen" 
           type="file"
-
+          onChange={handleInputFile}
+          // multiple
         />
       </div>
 
