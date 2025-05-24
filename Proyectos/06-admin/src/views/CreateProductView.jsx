@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "../components/Input";
+import { requestCreateProduct } from "../services/productService";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
@@ -31,9 +32,15 @@ const CreateProductView = () => {
 
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ product })
+    // console.log({ product })
+    try {
+      const res = await requestCreateProduct(product);
+      console.log("Hecho!!", res);
+    } catch (error) {
+      console.log(error)
+    }
   }
   
   return (
