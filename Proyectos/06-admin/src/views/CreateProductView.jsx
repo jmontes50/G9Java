@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "../components/Input";
 import { requestCreateProduct } from "../services/productService";
+import { uploadFile } from "../services/supabaseService";
 
 const CreateProductView = () => {
   const [product, setProduct] = useState({
@@ -37,6 +38,11 @@ const CreateProductView = () => {
     e.preventDefault();
     // console.log({ product })
     try {
+      if(image){
+        await uploadFile(image);
+        
+      }
+      return; //temporal, para que no cree el producto todavia
       const res = await requestCreateProduct(product);
       console.log("Hecho!!", res);
     } catch (error) {
