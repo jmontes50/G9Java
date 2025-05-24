@@ -16,14 +16,19 @@ const CreateProductView = () => {
 
   const inputsInfo = [
     { name:"nombre", label:"Nombre del producto", type: "text" },
-    { name:"descripcion", label:"Descripción", type: "text" }
+    { name:"descripcion", label:"Descripción", type: "text" },
+    { name:"precio", label:"Precio Normal", type: "number" },
+    { name:"precio_oferta", label:"Precio Oferta", type: "number" },
+    { name:"cantidad", label:"Cantidad del producto", type: "number" },
+    { name:"estrellas", label:"Califación", type: "number" },
+    { name:"detalles", label:"Detalles del producto", type: "text" }
   ]
 
   const handleInput = (event) => {
-    console.log("name:", event.target.name);
-    console.log("value:", event.target.value);
-    // setProduct({...product, nombre: "chocolate"})
+    // console.log("name:", event.target.name);
+    // console.log("value:", event.target.value);
     setProduct({...product, [event.target.name]:event.target.value});
+
   }
   
   return (
