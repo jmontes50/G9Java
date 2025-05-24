@@ -55,6 +55,16 @@ const CreateProductView = () => {
           handleInput={handleInput}
         />
       ))}
+      <div className="mb-3 p-2">
+        <label className="block mb-1" htmlFor="imagen">Seleccione una imagen:</label>
+        <input
+          className="file-input w-full"
+          id="imagen" 
+          type="file"
+
+        />
+      </div>
+
       <button className="btn btn-soft btn-success mt-2">
         Guardar
       </button>
