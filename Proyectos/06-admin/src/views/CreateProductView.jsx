@@ -39,10 +39,10 @@ const CreateProductView = () => {
     // console.log({ product })
     try {
       if(image){
-        await uploadFile(image);
-        
+        const publicUrlImage = await uploadFile(image);
+        product.imagen = publicUrlImage;
       }
-      return; //temporal, para que no cree el producto todavia
+      // return; //temporal, para que no cree el producto todavia
       const res = await requestCreateProduct(product);
       console.log("Hecho!!", res);
     } catch (error) {
