@@ -31,7 +31,9 @@ const TableData = (props) => {
             {/* actions */}
             {actions.map((act, i) => (
               <td key={i} className="border-t-2 px-4 py-2">
-                <button className={`btn btn-${act.bgColor}`}>
+                <button
+                  className={act.class}
+                >
                   {act.name}
                 </button>
               </td>

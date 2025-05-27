@@ -9,20 +9,35 @@ const DashboardView = () => {
   const headers = [
     { name: "nombre", label: "Nombre" },
     { name: "descripcion", label: "Descripción" },
-    { name: "precio", 
+    {
+      name: "precio",
       label: "Precio Normal",
-      format: (value) => `S/ ${value}`
-    }
-  ]
+      format: (value) => `S/ ${value}`,
+    },
+  ];
 
   //objetitos que indique el nombre, el como de la acción a ejecutar (editar y eliminar)
   const actionsTable = [
-    { name: "Editar", icon: "edit", bgColor: "warning", action: () => {console.log("Editar!!")}},
-    { name: "Eliminar", icon: "delete", bgColor: "error", action: () => {console.log("Eliminar!!")}}
-  ]
+    {
+      name: "Editar",
+      icon: "edit",
+      class: "btn btn-warning btn-sm", //X bgColor
+      action: () => {
+        console.log("Editar!!");
+      },
+    },
+    {
+      name: "Eliminar",
+      icon: "delete",
+      class: "btn btn-error btn-sm", //X bgColor
+      action: () => {
+        console.log("Eliminar!!");
+      },
+    },
+  ];
 
   useEffect(() => {
-    try { 
+    try {
       const getProducts = async () => {
         const productsObtained = await requestProducts();
         // console.log(products);
@@ -34,14 +49,12 @@ const DashboardView = () => {
     }
   }, []);
 
-  return <div className="max-w-[1280px] mx-auto p-4">
-    <h2 className="pb-4">Dashboard View</h2>
-    <TableData 
-      data={products}
-      headers={headers} 
-      actions={actionsTable} 
-    />
-  </div>;
+  return (
+    <div className="max-w-[1280px] mx-auto p-4">
+      <h2 className="pb-4">Dashboard View</h2>
+      <TableData data={products} headers={headers} actions={actionsTable} />
+    </div>
+  );
 };
 
 export default DashboardView;
