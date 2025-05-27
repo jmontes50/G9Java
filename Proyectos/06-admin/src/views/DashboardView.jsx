@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { requestProducts } from "../services/productService";
 import TableData from "../components/TableData";
+import { useNavigate } from "react-router-dom";
 
 const DashboardView = () => {
   const [products, setProducts] = useState([]);
+
+  const navigate = useNavigate();
 
   //se utilizará para las cabeceras de la tabla
   const headers = [
@@ -22,8 +25,8 @@ const DashboardView = () => {
       name: "Editar",
       icon: "edit",
       class: "btn btn-warning btn-sm", //X bgColor
-      action: () => {
-        console.log("Editar!!");
+      action: (id) => {
+        navigate(`/editproduct/${id}`)
       },
     },
     {
