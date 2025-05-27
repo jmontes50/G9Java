@@ -93,6 +93,19 @@ const CreateProductView = () => {
           handleInput={handleInput}
         />
       ))}
+      {/* select de categorias */}
+      <div className="mb-3 p-2">
+        <label className="block mb-1">Seleccione la categoría</label>
+        <select className="select w-full">
+          {categories.map((category) => (
+            <option key={category.id} value={category.id}>
+              {category.nombre}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* inputfile */}
       <div className="mb-3 p-2">
         <label className="block mb-1" htmlFor="imagen">Seleccione una imagen:</label>
         <input
