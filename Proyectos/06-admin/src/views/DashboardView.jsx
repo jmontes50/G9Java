@@ -15,8 +15,8 @@ const DashboardView = () => {
     }
   ]
 
+  //objetitos que indique el nombre, el como de la acción a ejecutar (editar y eliminar)
   const actionsTable = [
-    //objetitos que indique el nombre, el como de la acción a ejecutar (editar y eliminar)
     { name: "Editar", icon: "edit", bgColor: "warning", action: () => {console.log("Editar!!")}},
     { name: "Eliminar", icon: "delete", bgColor: "danger", action: () => {console.log("Eliminar!!")}}
   ]
@@ -36,7 +36,11 @@ const DashboardView = () => {
 
   return <div className="max-w-[1280px] mx-auto p-4">
     <h2 className="pb-4">Dashboard View</h2>
-    <TableData data={products} headers={headers} />
+    <TableData 
+      data={products}
+      headers={headers} 
+      actions={actionsTable} 
+    />
   </div>;
 };
 

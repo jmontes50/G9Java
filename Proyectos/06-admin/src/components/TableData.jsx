@@ -1,6 +1,6 @@
 const TableData = (props) => {
-  const { data, headers } = props;
-  console.log(data);
+  const { data, headers, actions } = props;
+  console.log(actions);
 
   return (
     <table className="border-collapse border-t-2 w-full px-4 py-2">
@@ -26,6 +26,14 @@ const TableData = (props) => {
                   ? head.format(product[head.name])
                   : product[head.name]}
                 {/* {product[head.name]} */}
+              </td>
+            ))}
+            {/* actions */}
+            {actions.map((act, i) => (
+              <td key={i} className="border-t-2 px-4 py-2">
+                <button className="btn">
+                  {act.name}
+                </button>
               </td>
             ))}
           </tr>
