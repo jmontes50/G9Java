@@ -18,7 +18,7 @@ const DashboardView = () => {
   //objetitos que indique el nombre, el como de la acción a ejecutar (editar y eliminar)
   const actionsTable = [
     { name: "Editar", icon: "edit", bgColor: "warning", action: () => {console.log("Editar!!")}},
-    { name: "Eliminar", icon: "delete", bgColor: "danger", action: () => {console.log("Eliminar!!")}}
+    { name: "Eliminar", icon: "delete", bgColor: "error", action: () => {console.log("Eliminar!!")}}
   ]
 
   useEffect(() => {
