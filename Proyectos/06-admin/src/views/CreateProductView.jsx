@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Input from "../components/Input";
 import { requestCreateProduct } from "../services/productService";
+import { requestCategories } from "../services/categoryService";
 import { uploadFile } from "../services/supabaseService";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -18,6 +19,7 @@ const CreateProductView = () => {
     categoryId:1,
   });
   const [image, setImage] = useState(null);
+  const [categories, setCategories] = useState([]);
 
   const navigate = useNavigate();
 
@@ -65,6 +67,19 @@ const CreateProductView = () => {
     //target.files nos da un FileList que funciona como Array asi que tomamos la 1ra imagen con [0]
     setImage(event.target.files[0]);
   }
+
+  useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const data = await requestCategories();
+        // console.log("getCategories", data);
+        setCategories(data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getCategories();
+  }, []);
   
   return (
     <form onSubmit={handleSubmit}>
