@@ -40,6 +40,13 @@ const CreateProductView = () => {
 
   }
 
+  //e es el evento;
+  const handleSelect = (e) => {
+    // console.log(e.target.value);
+    const newCategoryId = Number(e.target.value);
+    setProduct({...product, categoryId: newCategoryId});
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log({ product })
@@ -96,7 +103,10 @@ const CreateProductView = () => {
       {/* select de categorias */}
       <div className="mb-3 p-2">
         <label className="block mb-1">Seleccione la categoría</label>
-        <select className="select w-full">
+        <select 
+          className="select w-full"
+          onChange={handleSelect}
+        >
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
               {category.nombre}
