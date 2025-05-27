@@ -1,3 +1,5 @@
+import icons from "../utils/icons";
+
 const TableData = (props) => {
   const { data, headers, actions } = props;
   console.log(actions);
@@ -34,7 +36,8 @@ const TableData = (props) => {
                 <button
                   className={act.class}
                 >
-                  {act.name}
+                  <i className={icons[act.icon]} />
+                  {/* {act.name} */}
                 </button>
               </td>
             ))}
