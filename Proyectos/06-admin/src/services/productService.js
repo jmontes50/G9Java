@@ -29,7 +29,21 @@ const requestCreateProduct = async (newProduct) => {
   }
 }
 
+const requestProductById = async (id) => {
+  try {
+    const response = await axios.get(`${URL}/products/${id}`);
+    if(response.status === 200) {
+      return response.data;
+    } else {
+      throw new Error("Error en el código de estado de la petición por ID");
+    }
+  } catch (error) {
+    throw error;
+  }
+}
+
 export {
   requestProducts,
-  requestCreateProduct
+  requestCreateProduct,
+  requestProductById
 }
