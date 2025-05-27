@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto representa la culminación de la parte de frontend Se puede desarrollar utilizando React con Vite o Vanilla JS con manipulación del DOM, permitiendo la participación individual ó en equipos de hasta 3 integrantes, *en caso de tener un equipo previo a la primera parte del Bootcamp pueden mantenerlo*. El objetivo es crear una aplicación web funcional que demuestre las habilidades adquiridas durante esta etapa del bootcamp.
+Este proyecto representa la culminación de la parte de frontend Se puede desarrollar utilizando React con Vite, permitiendo la participación individual ó en equipos de hasta 3 integrantes, *en caso de tener un equipo previo a la primera parte del Bootcamp pueden mantenerlo*. El objetivo es crear una aplicación web funcional que demuestre las habilidades adquiridas durante esta etapa del bootcamp.
 
 ## Temática
 
