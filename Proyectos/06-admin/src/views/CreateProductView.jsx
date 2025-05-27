@@ -18,6 +18,7 @@ const CreateProductView = () => {
     imagen: "https://picsum.photos/500",
     categoryId:1,
   });
+  //NOTE: useParams nos permite obtener data de la URL
   const [image, setImage] = useState(null);
   const [categories, setCategories] = useState([]);
 
@@ -56,6 +57,7 @@ const CreateProductView = () => {
         product.imagen = publicUrlImage;
       }
       // return; //temporal, para que no cree el producto todavia
+      //NOTE: con un if indicariamos que accion ejecutar
       const res = await requestCreateProduct(product);
       // console.log("Hecho!!", res);
       await Swal.fire({
@@ -86,6 +88,7 @@ const CreateProductView = () => {
       }
     }
     getCategories();
+    //NOTE: colocar la función que obtiene el estado por ID
   }, []);
   
   return (
