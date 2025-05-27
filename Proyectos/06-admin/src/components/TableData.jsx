@@ -35,6 +35,7 @@ const TableData = (props) => {
               <td key={i} className="border-t-2 px-4 py-2">
                 <button
                   className={act.class}
+                  onClick={act.action}
                 >
                   <i className={icons[act.icon]} />
                   {/* {act.name} */}
