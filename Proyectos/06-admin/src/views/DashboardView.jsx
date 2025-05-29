@@ -31,6 +31,15 @@ const DashboardView = () => {
       showCancelButton: true,
       cancelButtonText: "No, cancelar"
     })
+    if(resultSwal.isConfirmed) {
+      await requestDeleteProduct(id);
+      await Swal.fire({
+        title:"Producto eliminado",
+        icon: "success"
+      })
+      const filteredProductsAfterDelete = products.filter((prod) => prod.id !== id);
+      setProducts(filteredProductsAfterDelete);
+    }
   }
 
   //objetitos que indique el nombre, el como de la acción a ejecutar (editar y eliminar)
@@ -47,8 +56,8 @@ const DashboardView = () => {
       name: "Eliminar",
       icon: "delete",
       class: "btn btn-error btn-sm", //X bgColor
-      action: () => {
-        handleDelete()
+      action: (id) => {
+        handleDelete(id)
       },
     },
   ];
