@@ -107,6 +107,15 @@ const EditProductView = () => {
           </div>
         </div>
       </form>
+      {/* modal */}
+      <dialog className="modal">
+        <div className="modal-box">
+          {/* content */}
+        </div>
+        <form method="dialog" className="modal-backdrop">
+          close
+        </form>
+      </dialog>
     </>
   );
 };
