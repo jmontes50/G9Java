@@ -4,6 +4,9 @@ import { requestProductById } from "../services/productService";
 import { requestCategories } from "../services/categoryService";
 import Input from "../components/Input";
 import { uploadFile } from "../services/supabaseService";
+import { requestUpdateProduct } from "../services/productService";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const EditProductView = () => {
   const { id } = useParams();
@@ -26,6 +29,8 @@ const EditProductView = () => {
 
   const [categories, setCategories] = useState([]);
   const [image, setImage] = useState(null);
+
+  const navigate = useNavigate();
 
   const inputsInfo = [
     { name: "nombre", label: "Nombre del producto", type: "text" },
@@ -59,6 +64,11 @@ const EditProductView = () => {
     modalRef.current.close();
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("Submit!")
+  }
+
   useEffect(() => {
     const getProductAndCategories = async () => {
       try {
@@ -77,7 +87,7 @@ const EditProductView = () => {
   return (
     <>
       <h1 className="text-2xl font-semibold mb-2">Editar Producto</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         {inputsInfo.map((item, i) => (
           <Input
             key={i} //key no se envia como props
