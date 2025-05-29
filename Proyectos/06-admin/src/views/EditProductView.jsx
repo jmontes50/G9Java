@@ -66,7 +66,21 @@ const EditProductView = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submit!")
+    try {
+      if(image) {
+        const publicUrlImage = await uploadFile(image);
+        product.imagen = publicUrlImage;
+      }
+      await requestUpdateProduct(product);
+      await Swal.fire({
+        icon:"success",
+        title:"Edición exitosa",
+        text:`${product.nombre} se editó correctamente`
+      })
+      navigate('/');
+    } catch (error) {
+      
+    }
   }
 
   useEffect(() => {
@@ -133,6 +147,9 @@ const EditProductView = () => {
           </div>
           {/* <img src={product.imagen} alt={product.nombre} className={show ? "block" : "hidden"}/> */}
         </div>
+        <button className="btn btn-soft btn-success mt-2">
+          Confirmar cambios
+        </button>
       </form>
       {/* modal */}
       <dialog className="modal" ref={modalRef}>
