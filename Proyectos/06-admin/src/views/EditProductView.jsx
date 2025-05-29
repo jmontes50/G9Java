@@ -1,55 +1,63 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { requestProductById } from "../services/productService"
+import { requestProductById } from "../services/productService";
+import { requestCategories } from "../services/categoryService";
 import Input from "../components/Input";
 
 const EditProductView = () => {
   const { id } = useParams();
 
   const [product, setProduct] = useState({
-    nombre:"",
-    descripcion:"",
-    precio:0,
-    detalles:"",
-    precio_oferta:0,
-    cantidad:0,
-    estrellas:4,
+    nombre: "",
+    descripcion: "",
+    precio: 0,
+    detalles: "",
+    precio_oferta: 0,
+    cantidad: 0,
+    estrellas: 4,
     imagen: "https://picsum.photos/500",
-    categoryId:1,
+    categoryId: 1,
   });
 
+  const [categories, setCategories] = useState([]);
+
   const inputsInfo = [
-    { name:"nombre", label:"Nombre del producto", type: "text" },
-    { name:"descripcion", label:"Descripción", type: "text" },
-    { name:"precio", label:"Precio Normal", type: "number" },
-    { name:"precio_oferta", label:"Precio Oferta", type: "number" },
-    { name:"cantidad", label:"Cantidad del producto", type: "number" },
-    { name:"estrellas", label:"Califación", type: "number" },
-    { name:"detalles", label:"Detalles del producto", type: "text" }
-  ]
+    { name: "nombre", label: "Nombre del producto", type: "text" },
+    { name: "descripcion", label: "Descripción", type: "text" },
+    { name: "precio", label: "Precio Normal", type: "number" },
+    { name: "precio_oferta", label: "Precio Oferta", type: "number" },
+    { name: "cantidad", label: "Cantidad del producto", type: "number" },
+    { name: "estrellas", label: "Califación", type: "number" },
+    { name: "detalles", label: "Detalles del producto", type: "text" },
+  ];
 
   const handleInput = (event) => {
-    setProduct({...product, [event.target.name]:event.target.value});
-  }
+    setProduct({ ...product, [event.target.name]: event.target.value });
+  };
+
+  const handleSelect = (e) => {
+    const newCategoryId = Number(e.target.value);
+    setProduct({ ...product, categoryId: newCategoryId });
+  };
 
   useEffect(() => {
-    const getProduct = async () => {
+    const getProductAndCategories = async () => {
       try {
         const data = await requestProductById(id);
+        const dataCategories = await requestCategories();
         // console.log(data);
         setProduct(data);
+        setCategories(dataCategories);
       } catch (error) {
         console.log(error);
       }
-    }
-    getProduct();
-  }, [])
+    };
+    getProductAndCategories();
+  }, []);
 
   return (
     <>
-      <h1 className="text-2xl font-semibold mb-2">
-        Editar Producto
-      </h1>
+      <h1 className="text-2xl font-semibold mb-2">Editar Producto</h1>
       <form>
         {inputsInfo.map((item, i) => (
           <Input
@@ -61,9 +69,20 @@ const EditProductView = () => {
             handleInput={handleInput}
           />
         ))}
+        {/* select de categorias */}
+        <div className="mb-3 p-2">
+          <label className="block mb-1">Seleccione la categoría</label>
+          <select className="select w-full" onChange={handleSelect}>
+            {categories.map((category) => (
+              <option key={category.id} value={category.id}>
+                {category.nombre}
+              </option>
+            ))}
+          </select>
+        </div>
       </form>
     </>
-  )
-}
+  );
+};
 
-export default EditProductView
+export default EditProductView;
