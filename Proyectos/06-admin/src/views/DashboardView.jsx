@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { requestProducts } from "../services/productService";
+import { requestProducts, requestDeleteProduct } from "../services/productService";
 import TableData from "../components/TableData";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const DashboardView = () => {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,19 @@ const DashboardView = () => {
     },
   ];
 
+  const handleDelete = async (id) => {
+    const resultSwal = await Swal.fire({
+      title: "Desea eliminar este producto?",
+      text: "Esta acción es irreversible",
+      icon: "warning",
+      showConfirmButton: true,
+      confirmButtonText: "Si, eliminar producto",
+      confirmButtonColor: "red",
+      showCancelButton: true,
+      cancelButtonText: "No, cancelar"
+    })
+  }
+
   //objetitos que indique el nombre, el como de la acción a ejecutar (editar y eliminar)
   const actionsTable = [
     {
@@ -34,7 +48,7 @@ const DashboardView = () => {
       icon: "delete",
       class: "btn btn-error btn-sm", //X bgColor
       action: () => {
-        console.log("Eliminar!!");
+        handleDelete()
       },
     },
   ];
