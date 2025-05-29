@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { requestProductById } from "../services/productService";
 import { requestCategories } from "../services/categoryService";
@@ -19,6 +19,10 @@ const EditProductView = () => {
     imagen: "https://picsum.photos/500",
     categoryId: 1,
   });
+
+  //sirve para referenciar elementos en el JSX,
+  //sin necesidad de un estado
+  const modalRef = useRef();
 
   const [categories, setCategories] = useState([]);
   const [image, setImage] = useState(null);
@@ -46,6 +50,10 @@ const EditProductView = () => {
     //target.files nos da un FileList que funciona como Array asi que tomamos la 1ra imagen con [0]
     setImage(event.target.files[0]);
   };
+
+  const openDialog = () => {
+    console.log(modalRef)
+  }
 
   useEffect(() => {
     const getProductAndCategories = async () => {
@@ -101,14 +109,18 @@ const EditProductView = () => {
               // multiple
             />
             {/* ver imagen actual */}
-            <button className="btn btn-neutral" type="button">
+            <button 
+              className="btn btn-neutral" 
+              type="button"
+              onClick={openDialog}
+            >
               Ver Imagen Actual
             </button>
           </div>
         </div>
       </form>
       {/* modal */}
-      <dialog className="modal">
+      <dialog className="modal" ref={modalRef}>
         <div className="modal-box">
           {/* content */}
         </div>
