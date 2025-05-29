@@ -121,6 +121,7 @@ const EditProductView = () => {
               Ver Imagen Actual
             </button>
           </div>
+          {/* <img src={product.imagen} alt={product.nombre} className={show ? "block" : "hidden"}/> */}
         </div>
       </form>
       {/* modal */}
