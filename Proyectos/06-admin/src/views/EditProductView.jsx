@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { requestProductById } from "../services/productService";
 import { requestCategories } from "../services/categoryService";
 import Input from "../components/Input";
+import { uploadFile } from "../services/supabaseService";
 
 const EditProductView = () => {
   const { id } = useParams();
@@ -20,6 +21,7 @@ const EditProductView = () => {
   });
 
   const [categories, setCategories] = useState([]);
+  const [image, setImage] = useState(null);
 
   const inputsInfo = [
     { name: "nombre", label: "Nombre del producto", type: "text" },
@@ -38,6 +40,11 @@ const EditProductView = () => {
   const handleSelect = (e) => {
     const newCategoryId = Number(e.target.value);
     setProduct({ ...product, categoryId: newCategoryId });
+  };
+
+  const handleInputFile = (event) => {
+    //target.files nos da un FileList que funciona como Array asi que tomamos la 1ra imagen con [0]
+    setImage(event.target.files[0]);
   };
 
   useEffect(() => {
@@ -79,6 +86,25 @@ const EditProductView = () => {
               </option>
             ))}
           </select>
+        </div>
+        {/* input file */}
+        <div className="mb-3 p-2">
+          <label className="block mb-1" htmlFor="imagen">
+            Seleccione una imagen:
+          </label>
+          <div className="flex gap-2">
+            <input
+              className="file-input w-full"
+              id="imagen"
+              type="file"
+              onChange={handleInputFile}
+              // multiple
+            />
+            {/* ver imagen actual */}
+            <button className="btn btn-neutral" type="button">
+              Ver Imagen Actual
+            </button>
+          </div>
         </div>
       </form>
     </>
