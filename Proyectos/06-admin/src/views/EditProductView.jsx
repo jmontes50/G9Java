@@ -52,7 +52,11 @@ const EditProductView = () => {
   };
 
   const openDialog = () => {
-    console.log(modalRef)
+    modalRef.current.showModal();
+  }
+
+  const closeDialog = () => {
+    modalRef.current.close();
   }
 
   useEffect(() => {
@@ -123,10 +127,14 @@ const EditProductView = () => {
       <dialog className="modal" ref={modalRef}>
         <div className="modal-box">
           {/* content */}
+          <img src={product.imagen} alt={product.nombre} />
+          <button 
+            className="btn btn-neutral btn-sm mt-2 ms-auto block" 
+            onClick={closeDialog}
+          >
+            Cerrar
+          </button>
         </div>
-        <form method="dialog" className="modal-backdrop">
-          close
-        </form>
       </dialog>
     </>
   );
