@@ -79,7 +79,7 @@ const EditProductView = () => {
       })
       navigate('/');
     } catch (error) {
-      
+      console.log(error);
     }
   }
 

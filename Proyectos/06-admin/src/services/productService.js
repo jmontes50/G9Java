@@ -45,8 +45,11 @@ const requestProductById = async (id) => {
 const requestUpdateProduct = async (productUpdated) => {
   try {
     const response = await axios.put(`${URL}/products/${productUpdated.id}`, productUpdated);
-    console.log(response);
-    return response.data;
+    if(response.status === 200) {
+      return response.data;
+    } else {
+      throw new Error("Error en el código de estado de la petición por ID");
+    }
   } catch (error) {
     throw error;
   }
