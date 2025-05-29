@@ -17,7 +17,7 @@ const CreateProductView = () => {
     estrellas:4,
     imagen: "https://picsum.photos/500",
     categoryId:1,
-  });
+  }); 
   //NOTE: useParams nos permite obtener data de la URL
   const [image, setImage] = useState(null);
   const [categories, setCategories] = useState([]);
