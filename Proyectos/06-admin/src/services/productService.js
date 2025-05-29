@@ -55,9 +55,20 @@ const requestUpdateProduct = async (productUpdated) => {
   }
 }
 
+const requestDeleteProduct = async (id) => {
+  try {
+    const response = await axios.delete(`${URL}/products/${id}`);
+    console.log(response)
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
 export {
   requestProducts,
   requestCreateProduct,
   requestProductById,
-  requestUpdateProduct
+  requestUpdateProduct,
+  requestDeleteProduct
 }
