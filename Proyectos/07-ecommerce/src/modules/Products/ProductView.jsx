@@ -3,7 +3,7 @@ import useGetAxios from "../../hooks/useGetAxios";
 const ProductView = () => {
   const URL = "https://simple-api-3maz.onrender.com/productos";
 
-  const { data } = useGetAxios(URL);
+  const { data, loading, error } = useGetAxios(URL);
   console.log(data);
 
   return (
