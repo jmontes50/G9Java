@@ -1,5 +1,6 @@
 import useGetAxios from "../../hooks/useGetAxios";
 import Loading from "../ui/Loading";
+import ProductCard from "../ui/ProductCard";
 
 const ProductView = () => {
   const URL = "https://simple-api-3maz.onrender.com/productos";

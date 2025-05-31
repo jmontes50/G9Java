@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
 </div>
    */
   return (
-    <div className="card bg-base-200 w-full shadow-sm">
+    <div className="card bg-base-200 w-96 shadow-sm">
       <picture className="h-420 w-full">
         <img src={product.imagen} className="w-full h-full object-cover" alt={product.nombre} />
       </picture>
@@ -24,7 +24,8 @@ const ProductCard = ({ product }) => {
         <div className="flex gap-4">
           <div className="grow-1">
             <h2 className="card-title">{product.nombre}</h2>
-            <p>{product.precio}</p>
+            {/* toFixed es un método que me permite indicar cuantos decimales quiero mostrar */}
+            <p>S/ {product.precio.toFixed(2)}</p>
           </div>
           <button className="btn btn-primary">
             <i className="fa-solid fa-eye"></i>
