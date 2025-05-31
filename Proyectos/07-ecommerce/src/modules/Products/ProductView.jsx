@@ -1,11 +1,29 @@
+import { useState } from "react";
 import useGetAxios from "../../hooks/useGetAxios";
 import Loading from "../ui/Loading";
 import ProductCard from "../ui/ProductCard";
 
 const ProductView = () => {
-  const URL = "https://simple-api-3maz.onrender.com/productos";
+  const [page, setPage] = useState(1);
+
+  // const URL = "https://simple-api-3maz.onrender.com/productos";
+  const URL = `https://simple-api-3maz.onrender.com/productos?page=${page}`
 
   const { data, loading, error } = useGetAxios(URL);
+
+  const totalPages = data.meta.totalPages;
+
+  const previousPage = () => {
+    if(page > 1) { //para no pasarnos del 1 ó menos
+      setPage(page - 1);
+    }
+  }
+
+  const nextPage = () => {
+    if(page < totalPages) { //validamos que sea menor a las paginas totales de la API
+      setPage(page + 1);
+    }
+  }
 
   if (loading) {
     return <Loading />;
@@ -30,10 +48,10 @@ const ProductView = () => {
           ))}
       </div>
       <div className="flex justify-between">
-        <button className="btn btn-primary">
+        <button className="btn btn-primary" onClick={previousPage}>
           Página Previa
         </button>
-        <button className="btn btn-primary">
+        <button className="btn btn-primary" onClick={nextPage}>
           Siguiente Página
         </button>
       </div>
