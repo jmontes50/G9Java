@@ -1,10 +1,18 @@
 import useGetAxios from "../../hooks/useGetAxios";
+import Loading from "../ui/Loading";
 
 const ProductView = () => {
   const URL = "https://simple-api-3maz.onrender.com/productos";
 
   const { data, loading, error } = useGetAxios(URL);
-  console.log(data);
+  
+  if(loading){
+    return <Loading />
+  }
+
+  if(error) {
+    return <p className="text-xl p-4">Ocurrio un error, por favor intente de nuevo en unos momentos</p>
+  }
 
   return (
     <div>
