@@ -8,7 +8,8 @@ const ProductView = () => {
 
   return (
     <div>
-      {data.productos &&
+      {/* obj?.property , operador de encadenamiento opcional */}
+      {data?.productos &&
         data.productos.map((item) => <p key={item.id}>{item.nombre}</p>)}
     </div>
   );
