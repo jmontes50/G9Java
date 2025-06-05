@@ -45,7 +45,11 @@ const ProductDetailView = () => {
         <p className="font-semibold text-gray-400 mb-3">Stock: {data.stock}</p>
         <p className="font-semibold mb-4">S/ {data.precio.toFixed(2)}</p>
         <p className="mb-4">{data.descripcion}</p>
-        <ButtonsQty />
+        <ButtonsQty 
+          qtyProduct={qtyProduct} 
+          incrementQty={incrementQty}
+          decrementQty={decrementQty}
+        />
       </div>
     </div>
   )
