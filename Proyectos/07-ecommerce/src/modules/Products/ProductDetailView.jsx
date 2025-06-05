@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useGetAxios from "../../hooks/useGetAxios";
 import Loading from "../ui/Loading";
 import ButtonsQty from "../ui/ButtonsQty";
+import useCartStore from "../../stores/useCartStore";
 
 const ProductDetailView = () => {
   const [qtyProduct, setQtyProduct] = useState(1);
@@ -13,6 +14,8 @@ const ProductDetailView = () => {
     `https://simple-api-3maz.onrender.com/productos/${id}`
   );
 
+  const { cart, addProductToCart } = useCartStore();
+
   if (loading) {
     return <Loading />;
   }
@@ -21,6 +24,11 @@ const ProductDetailView = () => {
     return (
       <p>Error al realizar la operación, intente de nuevo en unos momentos</p>
     );
+  }
+
+  const handleClickToCart = () => {
+    const productToCart = { ...data, quantity: qtyProduct };
+    addProductToCart(productToCart);
   }
 
   const incrementQty = () => {
@@ -57,7 +65,10 @@ const ProductDetailView = () => {
             incrementQty={incrementQty}
             decrementQty={decrementQty}
           />
-          <button className="btn btn-xl px-16 btn-accent">
+          <button 
+            className="btn btn-xl px-16 btn-accent" 
+            onClick={handleClickToCart}
+          >
             Añadir al Carrito
           </button>
         </div>
