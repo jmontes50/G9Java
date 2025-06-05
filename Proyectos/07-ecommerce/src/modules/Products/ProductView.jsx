@@ -11,7 +11,7 @@ const ProductView = () => {
 
   const { data, loading, error } = useGetAxios(URL);
 
-  const totalPages = data.meta.totalPages;
+  // const totalPages = data.meta.totalPages;
 
   const previousPage = () => {
     if(page > 1) { //para no pasarnos del 1 ó menos
@@ -29,6 +29,8 @@ const ProductView = () => {
     return <Loading />;
   }
 
+  const totalPages = data.meta.totalPages;
+
   if (error) {
     return (
       <p className="text-xl p-4">
@@ -36,6 +38,8 @@ const ProductView = () => {
       </p>
     );
   }
+
+  
 
   return (
     <div className="max-w-[1200px] mx-auto p-6">
