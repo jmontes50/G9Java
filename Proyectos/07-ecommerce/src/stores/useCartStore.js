@@ -4,8 +4,10 @@ import { devtools } from "zustand/middleware";
 const useCartStore = create(devtools((set) => ({
   cart: [],
   addProductToCart: (product) => {
+    //SET ACTUALIZA EL ESTADO
     set((state) => {
       const cartChanged = [...state.cart, product]
+      //a traves del return que representa el cambio de estado
       return {
         cart: cartChanged
       }
