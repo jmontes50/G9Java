@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useGetAxios from "../../hooks/useGetAxios";
 import Loading from "../ui/Loading";
 import ButtonsQty from "../ui/ButtonsQty";
 
 const ProductDetailView = () => {
+  const [qtyProduct, setQtyProduct] = useState(1);
+
   const { id } = useParams();
 
   const { data, loading, error } = useGetAxios(`https://simple-api-3maz.onrender.com/productos/${id}`)
@@ -15,7 +18,17 @@ const ProductDetailView = () => {
   if(error) {
     return <p>Error al realizar la operación, intente de nuevo en unos momentos</p>
   }
-  // console.log(data);
+  
+  const incrementQty = () => {
+    //en caso se llegue a la misma cantidad del stock cortamos la ejecución
+    if(qtyProduct === data.stock) return;
+    setQtyProduct(qtyProduct + 1);
+  }
+
+  const decrementQty = () => {
+    if(qtyProduct === 1) return;
+    setQtyProduct(qtyProduct - 1);
+  }
 
   return (
     <div className="max-w-[1200px] mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10">
