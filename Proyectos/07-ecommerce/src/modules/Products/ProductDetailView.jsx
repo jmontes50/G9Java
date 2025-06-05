@@ -17,7 +17,22 @@ const ProductDetailView = () => {
   // console.log(data);
 
   return (
-    <div>ProductDetailView</div>
+    <div className="max-w-[1200px] mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="w-full h-[500px]">
+        {/* img */}
+        <img src={data.imagen} alt={data.nombre} className="w-full h-full object-cover" />
+      </div>
+      <div className="">
+        {/* content */}
+        <h2 className="text-3xl font-semibold mb-5">
+          {data.nombre}
+        </h2>
+        <h3 className="text-2xl mb-5">Categoría: {data.categoria.nombre}</h3>
+        <p className="font-semibold text-gray-400 mb-3">Stock: {data.stock}</p>
+        <p className="font-semibold mb-4">S/ {data.precio.toFixed(2)}</p>
+        <p className="">{data.descripcion}</p>
+      </div>
+    </div>
   )
 }
 
