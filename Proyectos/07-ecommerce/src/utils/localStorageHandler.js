@@ -15,6 +15,8 @@ const getStorage = (name) => {
     return data
 }
 
+// localStorage.removeItem(name) //con esto borran
+
 export {
     saveStorage,
     getStorage
