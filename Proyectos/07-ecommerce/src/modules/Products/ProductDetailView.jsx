@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useGetAxios from "../../hooks/useGetAxios";
 import Loading from "../ui/Loading";
+import ButtonsQty from "../ui/ButtonsQty";
 
 const ProductDetailView = () => {
   const { id } = useParams();
@@ -30,7 +31,8 @@ const ProductDetailView = () => {
         <h3 className="text-2xl mb-5">Categoría: {data.categoria.nombre}</h3>
         <p className="font-semibold text-gray-400 mb-3">Stock: {data.stock}</p>
         <p className="font-semibold mb-4">S/ {data.precio.toFixed(2)}</p>
-        <p className="">{data.descripcion}</p>
+        <p className="mb-4">{data.descripcion}</p>
+        <ButtonsQty />
       </div>
     </div>
   )
