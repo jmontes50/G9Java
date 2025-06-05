@@ -1,6 +1,8 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
+const NAME_KEY_CART = "cart";
+
 const useCartStore = create(devtools((set) => ({
   cart: [], //estado
   addProductToCart: (product) => {
