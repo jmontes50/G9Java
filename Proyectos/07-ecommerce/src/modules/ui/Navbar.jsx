@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import useCartStore from "../../stores/useCartStore";
 
 const Navbar = () => {
+  const { cart } = useCartStore();
+ 
+  const totalQty = cart.reduce((acumulador, item) => acumulador + item.quantity, 0);
+      
   return (
     <nav className="navbar bg-base-100 shadow-sm max-w-[1200px] mx-auto">
       {/* start */}
@@ -25,7 +30,7 @@ const Navbar = () => {
             <span 
             className="badge badge-xs badge-primary indicator-item"
             >
-              1
+              {totalQty}
             </span>
           </div>
         </button>
