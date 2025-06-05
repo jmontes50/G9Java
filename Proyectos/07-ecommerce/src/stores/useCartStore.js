@@ -6,7 +6,7 @@ const useCartStore = create(devtools((set) => ({
   addProductToCart: (product) => {
     //SET ACTUALIZA EL ESTADO
     set((state) => {
-      //preguntando si existe el producto
+      //preguntando si existe el producto, findIndex retorna la posición númerica de un item que encuentre, si no retorna -1
       const indexProductIfExists = state.cart.findIndex((item) => item.id === product.id)
 
       if(indexProductIfExists === -1){ //si es -1 es nuevo, lo agregamos como un producto nuevo al estado/arreglo cart
