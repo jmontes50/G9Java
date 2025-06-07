@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import useAuthStore from "../../stores/useAuthStore";
 
 const RegisterPage = () => {
   const {
@@ -7,8 +8,15 @@ const RegisterPage = () => {
     formState: { errors },
   } = useForm();
 
-  const handleRegister = (data) => {
-    console.log(data);
+  const { registerUser } = useAuthStore();
+
+  //data tiene { nombre, email, password }, por como registramos los input
+  const handleRegister = async (data) => {
+    try {
+      await registerUser(data);
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   return (

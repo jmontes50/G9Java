@@ -10,7 +10,7 @@ const useAuthStore = create(devtools((set) => ({
   isLogged: false,
 
   //userInfo es un objeto que tiene { nombre, email, password }
-  register: async (userInfo) => {
+  registerUser: async (userInfo) => {
     try {
       const response = await axios.post("https://simple-api-3maz.onrender.com/auth/register", userInfo);
       if(response.status === 201) {
