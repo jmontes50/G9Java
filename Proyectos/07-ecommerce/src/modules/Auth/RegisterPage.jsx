@@ -1,4 +1,16 @@
+import { useForm } from "react-hook-form";
+
 const RegisterPage = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const handleRegister = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="card w-[400px] shadow-lg">
@@ -6,18 +18,33 @@ const RegisterPage = () => {
           <h2 className="card-title text-2xl font-semibold text-center">
             Registrarse
           </h2>
-          <form className="mt-4">
+          <form className="mt-4" onSubmit={handleSubmit(handleRegister)}>
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Nombre completo:</legend>
-              <input type="text" className="input w-full" placeholder="Juan Perez" />
+              <input
+                type="text"
+                className="input w-full"
+                placeholder="Juan Perez"
+                {...register("nombre", { required: "Es obligatorio" })}
+              />
             </fieldset>
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Email:</legend>
-              <input type="email" className="input w-full" placeholder="example@domain.com" />
+              <input
+                type="email"
+                className="input w-full"
+                placeholder="example@domain.com"
+                {...register("email", { required: "Es obligatorio" })}
+              />
             </fieldset>
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Contraseña:</legend>
-              <input type="password" className="input w-full" placeholder="mínimo 6 caracteres" />
+              <input
+                type="password"
+                className="input w-full"
+                placeholder="mínimo 6 caracteres"
+                {...register("password", { required: "Es obligatorio" })}
+              />
             </fieldset>
             <button className="btn btn-accent w-full mt-3">
               Confirmar Registro
