@@ -1,5 +1,6 @@
 import useCartStore from "../../stores/useCartStore";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const CartView = () => {
   const { cart } = useCartStore();
@@ -10,8 +11,11 @@ const CartView = () => {
     formState: { errors },
   } = useForm();
 
+  const notify = () => toast.success("Producto agregado!!!");
+
   const handleConfirmCart = (data) => {
     console.log(data);
+    notify();
   };
 
   return (
