@@ -1,7 +1,14 @@
-import useCartStore from "../../stores/useCartStore"
+import useCartStore from "../../stores/useCartStore";
+import { useForm } from "react-hook-form";
 
 const CartView = () => {
   const { cart } = useCartStore();
+
+  const { register, handleSubmit, formState: { errors }} = useForm();
+
+  const handleConfirmCart = (data) => {
+    console.log((data));
+  }
 
   return (
     <div className="max-w-[1200px] mx-auto py-6">
@@ -42,6 +49,7 @@ const CartView = () => {
           <h3 className="text-xl font-semibold">
             Datos de envio
           </h3>
+
         </div>
       </div>
     </div>
