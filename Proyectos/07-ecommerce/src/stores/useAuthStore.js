@@ -24,6 +24,26 @@ const useAuthStore = create(devtools((set) => ({
       toast.success("Error al registrarse, intente de nuevo");
       throw error;
     }
+  },
+  login: async (email, password) => {
+    try {
+      const response = await axios.post("https://simple-api-3maz.onrender.com/auth/login", { email, password });
+      if(response.status === 200) {
+        /** response
+         * token: "jwt",
+         * usuario: { nombre, email }
+         */
+        const { token, usuario } = response.data;
+        saveStorage("token-g9", token);
+        //seteamos el cambio en el store
+        set({ user: usuario, token: token, isLogged: true }, false, "auth/Login")
+      }else {
+        throw new Error("Error en la petición de login")
+      }
+    } catch (error) {
+      toast.error("Hubo un error, pruebe de nuevo");
+      throw(error);
+    }
   }
 })));
 
