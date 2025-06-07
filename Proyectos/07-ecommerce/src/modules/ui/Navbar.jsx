@@ -24,7 +24,7 @@ const Navbar = () => {
       </div>
       {/* end */}
       <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle">
+        <Link to="/cart" className="btn btn-ghost btn-circle">
           <div className="indicator">
             <i className="fa-solid fa-cart-shopping fa-2x"></i>
             <span
@@ -33,7 +33,7 @@ const Navbar = () => {
               {totalQty}
             </span>
           </div>
-        </button>
+        </Link>
       </div>
     </nav>
   )
