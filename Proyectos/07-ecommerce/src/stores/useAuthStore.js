@@ -13,6 +13,7 @@ const useAuthStore = create(devtools((set) => ({
   registerUser: async (userInfo) => {
     try {
       const response = await axios.post("https://simple-api-3maz.onrender.com/auth/register", userInfo);
+      console.log({ response })
       if(response.status === 201) {
         toast.success("Usuario registrado!");
         return true;

@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import useAuthStore from "../../stores/useAuthStore";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const {
@@ -10,10 +11,14 @@ const RegisterPage = () => {
 
   const { registerUser } = useAuthStore();
 
+  const navigate = useNavigate();
+
   //data tiene { nombre, email, password }, por como registramos los input
   const handleRegister = async (data) => {
+    console.log(data)
     try {
       await registerUser(data);
+      navigate('/login');
     } catch (error) {
       console.log(error)
     }
