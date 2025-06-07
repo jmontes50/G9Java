@@ -3,9 +3,9 @@ import useCartStore from "../../stores/useCartStore";
 
 const Navbar = () => {
   const { cart } = useCartStore();
- 
+
   const totalQty = cart.reduce((acumulador, item) => acumulador + item.quantity, 0);
-      
+
   return (
     <nav className="navbar bg-base-100 shadow-sm max-w-[1200px] mx-auto">
       {/* start */}
@@ -15,8 +15,8 @@ const Navbar = () => {
       {/* center */}
       <div className="navbar-center">
         <form>
-          <input 
-            type="search" 
+          <input
+            type="search"
             placeholder="Search"
             className="input input-bordered w-auto md:w-[350px]"
           />
@@ -26,8 +26,8 @@ const Navbar = () => {
       <div className="navbar-end">
         <button className="btn btn-ghost btn-circle">
           <div className="indicator">
-            <i className="fa-solid fa-cart-shopping"></i>
-            <span 
+            <i className="fa-solid fa-cart-shopping fa-2x"></i>
+            <span
             className="badge badge-xs badge-primary indicator-item"
             >
               {totalQty}
