@@ -48,11 +48,6 @@ const CartView = () => {
         {/* segunda col */}
         <div className="col-span-1">
           <h3 className="text-xl font-semibold">Datos de envio</h3>
-          {/* <fieldset className="fieldset">
-          <legend className="fieldset-legend">What is your name?</legend>
-          <input type="text" className="input" placeholder="Type here" />
-          <p className="label">Optional</p>
-        </fieldset> */}
           <form onSubmit={handleSubmit(handleConfirmCart)}>
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Nombre completo:</legend>
