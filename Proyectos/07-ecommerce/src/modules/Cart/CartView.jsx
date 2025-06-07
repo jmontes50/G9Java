@@ -56,12 +56,20 @@ const CartView = () => {
           <form onSubmit={handleSubmit(handleConfirmCart)}>
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Nombre completo:</legend>
-              <input type="text" className="input" placeholder="Jorge M" />
+              <input
+                type="text"
+                className="input w-full"
+                placeholder="Jorge M"
+                {...register("fullname", { required: true })}
+              />
             </fieldset>
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Direccióm:</legend>
-              <input type="text" className="input" placeholder="Av. Arenales" />
+              <input type="text" className="input w-full" placeholder="Av. Arenales" />
             </fieldset>
+            <button className="btn btn-success mt-4 ml-auto block">
+              Confirmar
+            </button>
           </form>
         </div>
       </div>
