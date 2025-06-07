@@ -13,8 +13,14 @@ const LoginPage = () => {
 
   const navigate = useNavigate();
 
-  const handleLogin = (data) => {
-    console.log(data)
+  const handleLogin = async (data) => {
+    try {
+      console.log(data);
+      await login(data.email, data.password);
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
