@@ -1,4 +1,8 @@
+import useCartStore from "../../stores/useCartStore"
+
 const CartView = () => {
+  const { cart } = useCartStore();
+
   return (
     <div className="max-w-[1200px] mx-auto py-6">
       <h2 className="text-3xl font-semibold mb-5">
@@ -19,6 +23,18 @@ const CartView = () => {
                 <th className="px-4 py-3 text-left">Sub-Total</th>
               </tr>
             </thead>
+            <tbody className="text-sm">
+              { cart && cart.map((prod) => (
+                <tr key={prod.id} className="border-b-2">
+                  <td className="px-4 py-3">{prod.nombre}</td>
+                  <td className="px-4 py-3">S/ {prod.precio.toFixed(2)}</td>
+                  <td className="px-4 py-3">{prod.quantity} Unid.</td>
+                  <td className="px-4 py-3">
+                    S/ {(prod.precio * prod.quantity).toFixed(2)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
         {/* segunda col */}
