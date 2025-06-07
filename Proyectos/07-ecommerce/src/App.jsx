@@ -4,6 +4,8 @@ import Navbar from "./modules/ui/Navbar";
 import ProductView from "./modules/Products/ProductView";
 import ProductDetailView from "./modules/Products/ProductDetailView";
 import CartView from "./modules/Cart/CartView";
+import RegisterPage from "./modules/Auth/RegisterPage";
+import LoginPage from "./modules/Auth/LoginPage";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
         <Route path="/" element={<ProductView />} />
         <Route path="/product/:id" element={<ProductDetailView/>} />
         <Route path="/cart" element={<CartView />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
       <ToastContainer />
     </BrowserRouter>
