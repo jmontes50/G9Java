@@ -74,6 +74,15 @@ const useAuthStore = create(
         });
       }
     },
+    logout: () => {
+      localStorage.removeItem("token-g9");
+      set({
+        token: null,
+        user: null,
+        isLogged: false,
+      });
+      toast.info("Sesión cerrada");
+    }
   }))
 );
 

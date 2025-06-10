@@ -15,6 +15,9 @@ const App = () => {
   const { verifyAuth } = useAuthStore();
 
   useEffect(() => {
+    // setInterval(() => {
+    //   verifyAuth();
+    // }, 900000)
     verifyAuth();
   }, [])
   return (

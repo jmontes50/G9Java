@@ -31,6 +31,7 @@ const Navbar = () => {
       </div>
       {/* end */}
       <div className="navbar-end">
+
         <Link to="/cart" className="btn btn-ghost btn-circle">
           <div className="indicator">
             <i className="fa-solid fa-cart-shopping fa-2x"></i>
@@ -39,6 +40,11 @@ const Navbar = () => {
             </span>
           </div>
         </Link>
+
+        <button className="btn btn-square btn-sm ml-2">
+          <i className="fa-solid fa-right-from-bracket fa-2x"></i>
+        </button>
+
         {/* toggle theme */}
         <button className="btn btn-square btn-sm ml-2" onClick={changeTheme}>
           {theme === "light" ? (
