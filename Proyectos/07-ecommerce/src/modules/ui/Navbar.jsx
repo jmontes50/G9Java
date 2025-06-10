@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import useCartStore from "../../stores/useCartStore";
 import useThemeStore from "../../stores/useThemeStore";
+import useAuthStore from "../../stores/useAuthStore";
 
 const Navbar = () => {
   const { cart } = useCartStore();
   const { theme, changeTheme } = useThemeStore();
+  const { logout } = useAuthStore();
 
   const totalQty = cart.reduce(
     (acumulador, item) => acumulador + item.quantity,
@@ -41,7 +43,10 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <button className="btn btn-square btn-sm ml-2">
+        <button
+          className="btn btn-square btn-sm ml-2"
+          onClick={logout}
+        >
           <i className="fa-solid fa-right-from-bracket fa-2x"></i>
         </button>
 
