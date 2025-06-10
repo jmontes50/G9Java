@@ -18,7 +18,7 @@ const OurProducts = () => {
       // console.log(categoryFound)
       setProducts(categoryFound.productos);
     }
-  }, [categorySelected]);
+  }, [categorySelected, categories]);
 
   return (
     <div className="max-w-[1000px] mx-auto py-4 mb-10">
