@@ -20,6 +20,18 @@ const Header = () => {
           </div>
         ))}
       </div>
+
+      <div className="flex justify-center w-full gap-2 py-2 absolute bottom-4 z-10">
+        {images.map((img, i) => (
+          <a
+            key={i}
+            className={`btn btn-xs`}
+            href={`#item${i + 1}`}
+          >
+            {i + 1}
+          </a>
+        ))}
+      </div>
     </div>
   )
 }
