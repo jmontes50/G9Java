@@ -7,6 +7,7 @@ import ProductDetailView from "./modules/Products/ProductDetailView";
 import CartView from "./modules/Cart/CartView";
 import RegisterPage from "./modules/Auth/RegisterPage";
 import LoginPage from "./modules/Auth/LoginPage";
+import HomeView from "./modules/Home/HomeView";
 import PrivateRoute from "./modules/Auth/components/PrivateRoute";
 import useAuthStore from "./stores/useAuthStore";
 
@@ -24,7 +25,8 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<ProductView />} />
+        <Route path="/" element={<HomeView />} />
+        <Route path="/products" element={<ProductView />} />
         <Route path="/product/:id" element={<ProductDetailView />} />
         <Route
           path="/cart"
