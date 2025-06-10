@@ -3,6 +3,7 @@ import useGetAxios from "../../../hooks/useGetAxios";
 import ProductCard from "../../ui/ProductCard";
 
 const OurProducts = () => {
+  const [categorySelected, setCategorySelected] = useState(1);
   const URL = "https://simple-api-3maz.onrender.com/categorias";
 
   //si estamos aplicando desestructuración pero quiero referenciar lo obtenido con otro nombre puedo asignar una referencia al momento de desestrecturar
@@ -14,7 +15,11 @@ const OurProducts = () => {
       <div className="join flex justify-center mb-6 gap-4">
         {categories &&
           categories.map((item) => (
-            <button className="btn join-item btn-ghost" key={item.id}>
+            <button
+              className="btn join-item btn-ghost"
+              key={item.id}
+              onClick={() => setCategorySelected(item.id)}
+            >
               {item.nombre}
             </button>
           ))}
