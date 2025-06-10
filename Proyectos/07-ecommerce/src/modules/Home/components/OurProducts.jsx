@@ -16,7 +16,7 @@ const OurProducts = () => {
         {categories &&
           categories.map((item) => (
             <button
-              className="btn join-item btn-ghost"
+              className={`btn join-item ${categorySelected === item.id ? "btn-primary" : "btn-ghost"} `}
               key={item.id}
               onClick={() => setCategorySelected(item.id)}
             >
