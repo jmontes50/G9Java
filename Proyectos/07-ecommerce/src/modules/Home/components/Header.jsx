@@ -29,12 +29,12 @@ export default function Carousel() {
 
   return (
     <div className="relative">
-      <div ref={carouselRef} className="carousel w-full h-96 overflow-x-scroll scroll-smooth snap-x snap-mandatory whitespace-nowrap no-scrollbar">
+      <div ref={carouselRef} className="carousel w-full h-[400px] overflow-x-scroll scroll-smooth snap-x snap-mandatory whitespace-nowrap no-scrollbar">
         {images.map((src, idx) => (
           <div
             key={idx}
             id={`item${idx + 1}`}
-            className="carousel-item w-full h-96 inline-block snap-center"
+            className="carousel-item w-full h-full inline-block snap-center"
           >
             <img src={src} alt={`Slide ${idx + 1}`} className="w-full h-full object-cover" />
           </div>

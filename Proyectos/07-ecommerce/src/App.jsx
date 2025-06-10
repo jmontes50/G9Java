@@ -9,6 +9,7 @@ import CartView from "./modules/Cart/CartView";
 import RegisterPage from "./modules/Auth/RegisterPage";
 import LoginPage from "./modules/Auth/LoginPage";
 import PrivateRoute from "./modules/Auth/components/PrivateRoute";
+import FilteredProductsView from "./modules/Products/FilteredProductsView";
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <CategoryBar />
       <Routes>
         <Route path='/' element={<HomeView />} />
-        {/* <Route path="/" element={<ProductView />} /> */}
+        <Route path="/products" element={<FilteredProductsView />} />
         <Route path="/product/:id" element={<ProductDetailView/>} />
         <Route path="/" element={<ProductView />} />
         <Route

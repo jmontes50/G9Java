@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import useCartStore from "../../stores/useCartStore";
 import useThemeStore from "../../stores/useThemeStore";
+import SearchInput from "./SearchInput";
 
 const Navbar = () => {
   const { cart } = useCartStore();
@@ -21,13 +22,7 @@ const Navbar = () => {
       </div>
       {/* center */}
       <div className="navbar-center">
-        <form>
-          <input
-            type="search"
-            placeholder="Search"
-            className="input input-bordered w-auto md:w-[350px]"
-          />
-        </form>
+        <SearchInput />
       </div>
       {/* end */}
       <div className="navbar-end">
