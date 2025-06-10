@@ -3,6 +3,7 @@ import { devtools } from "zustand/middleware";
 import { saveStorage, getStorage } from "../utils/localStorageHandler";
 import axios from "axios";
 import { toast } from "react-toastify";
+import tokenIsValid from "../utils/jwtUtils";
 
 const useAuthStore = create(devtools((set) => ({
   user: null,
@@ -44,6 +45,14 @@ const useAuthStore = create(devtools((set) => ({
       toast.error("Hubo un error, pruebe de nuevo");
       throw(error);
     }
+  },
+  verifyAuth: () => {
+    const token = getStorage("token-g9");
+    // !token invertimos el valor de token, a un booleano
+    //si es undefined se convierte a true
+    if(!token) return;
+
+    tokenIsValid(token);
   }
 })));
 
