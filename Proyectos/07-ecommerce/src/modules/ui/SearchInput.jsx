@@ -5,9 +5,10 @@ import axios from "axios";
 
 const SearchInput = () => {
   const inputRef = useRef(null);
-  const setProductosFiltrados = useProductStore(
-    (state) => state.setProductosFiltrados
-  );
+  // const setProductosFiltrados = useProductStore(
+  //   (state) => state.setProductosFiltrados
+  // );
+  const { setProductosFiltrados } = useProductStore();
 
   const navigate = useNavigate();
 
